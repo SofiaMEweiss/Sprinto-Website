@@ -8,15 +8,17 @@ import {
   NavMenu,
   NavItem,
   NavLinks,
+  NavBtn,
+  NavBtnLink,
 } from "./NavbarElements"
 
-const Navbar = () => {
+const Navbar = ({ toggle }) => {
   return (
     <>
       <Nav>
         <NavbarContainer>
           <NavLogo to="/">Sprinto</NavLogo>
-          <MobileIcon>
+          <MobileIcon onClick={toggle}>
             <FaBars />
           </MobileIcon>
           <NavMenu>
@@ -30,6 +32,9 @@ const Navbar = () => {
               <NavLinks to="focus">Vårt fokus</NavLinks>
             </NavItem>
           </NavMenu>
+          <NavBtn>
+            <NavBtnLink to="/signup">Jobba hos oss</NavBtnLink>
+          </NavBtn>
         </NavbarContainer>
       </Nav>
     </>
