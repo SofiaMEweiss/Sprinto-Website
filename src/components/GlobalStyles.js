@@ -5,7 +5,7 @@ export const GlobalStyles = createGlobalStyle `
 	box-sizing: border-box;
 	margin: 0px;
 	padding: 0px;
-	font-family: 'Encode Sans Expanded', sans-serif;
+	font-family: 'Century Gothic';
 	/* font-size: 12pt;
 	color: #000000; */
 }
