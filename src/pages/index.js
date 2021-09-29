@@ -9,7 +9,8 @@ import Navbar from "../components/Navbar"
 import Sidebar from "../components/Sidebar"
 import { HeroSection } from "../components/HeroSection"
 import InfoSection from "../components/InfoSection"
-import { homeObjOne } from "../components/InfoSection/Data"
+import { homeObjOne, homeObjTwo } from "../components/InfoSection/Data"
+import TeamSection from "../components/TeamSection"
 
 const IndexPage = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -26,7 +27,9 @@ const IndexPage = () => {
       <Sidebar isOpen={isOpen} toggle={toggle} />
       <Navbar toggle={toggle} />
       <HeroSection />
-      <InfoSection {...homeObjOne} /> {/* </Layout> */}
+      <InfoSection {...homeObjOne} />
+      <TeamSection /> {/* </Layout> */}
+      <InfoSection {...homeObjTwo} />
     </div>
   )
 }

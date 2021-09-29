@@ -1,4 +1,5 @@
 import React from "react"
+import { useEffect } from "react"
 import { Button } from "../ButtonElement"
 import image from "../../images/programming.svg"
 
@@ -34,6 +35,22 @@ const InfoSection = ({
   primary,
   dark,
 }) => {
+  const messageToType = "Härliga"
+  let cursorPosition = 0
+  const typewriterspeed = 200
+
+  useEffect(typewriter)
+
+  function typewriter() {
+    const span = document.getElementById("typewriterMessage")
+    span.innerHTML = messageToType.substring(0, cursorPosition)
+    cursorPosition++
+
+    if (cursorPosition <= messageToType.length) {
+      setTimeout(typewriter, typewriterspeed)
+    }
+  }
+
   return (
     <>
       <InfoContainer lightBg={lightBg} id={id}>
@@ -44,6 +61,13 @@ const InfoSection = ({
                 <TopLine> {topLine} </TopLine>
                 <Heading lightText={lightText}> {headline} </Heading>
                 <Subtitle darkText={darkText}> {description} </Subtitle>
+                <Subtitle darkText={darkText}>
+                  Vi söker alltid efter <span id="typewriterMessage"></span>
+                  <span>_</span>{" "}
+                  <Subtitle darkText={darkText}>
+                    kollegor. Ska vi ta en fika?
+                  </Subtitle>
+                </Subtitle>
                 <BtnWrap>
                   <Button
                     to="home"
