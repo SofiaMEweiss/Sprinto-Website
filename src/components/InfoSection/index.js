@@ -1,7 +1,7 @@
 import React from "react"
 import { useEffect } from "react"
 import { Button } from "../ButtonElement"
-import image from "../../images/programming.svg"
+// import image from "../../images/programming.svg"
 
 import {
   InfoContainer,
@@ -28,7 +28,7 @@ const InfoSection = ({
   darkText,
   description,
   buttonLabel,
-  //   img,
+  img,
   alt,
   fontBig,
   big,
@@ -88,7 +88,7 @@ const InfoSection = ({
             </Column1>
             <Column2>
               <ImgWrap>
-                <Img src={image} alt={alt} />
+                <Img src={img} alt={alt} />
               </ImgWrap>
             </Column2>
           </InfoRow>
