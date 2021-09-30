@@ -3,21 +3,14 @@ import { Link } from "gatsby"
 
 export const FooterContainer = styled.footer`
   background-color: #373e57;
-`
-
-export const FooterWrap = styled.div`
-  padding: 48px 24px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  max-width: 1100px;
-  margin: 0 auto;
+  color: #fff;
 `
 
 export const FooterLinksContainer = styled.div`
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  /* border: red solid 1px; */
+  padding: 48px;
 
   @media screen and (max-width: 820px) {
     padding-top: 32px;
@@ -25,92 +18,52 @@ export const FooterLinksContainer = styled.div`
 `
 export const FooterLinksWrapper = styled.div`
   display: flex;
-
-  @media screen and (max-width: 820px) {
-    flex-direction: column;
-  }
-`
-
-export const FooterLinkItem = styled.div`
-  display: flex;
+  /* border: red solid 1px; */
   flex-direction: column;
-  align-items: flex-start;
-  margin: 16px;
-  text-align: left;
-  width: 160px;
-  box-sizing: border-box;
-  color: white;
-
-  @media screen and (max-width: 420px) {
-    margin: 0;
-    padding: 10px;
-    width: 100%;
-  }
-`
-
-export const FooterLinkTitle = styled.h1`
-  font-size: 14px;
-  margin-bottom: 16px;
-`
-
-export const FooterLink = styled(Link)`
-  color: white;
-  text-decoration: none;
-  margin-bottom: 0.5rem;
-  font-size: 14px;
-
-  &:hover {
-    color: #01bf71;
-    transition: 0ms.3s ease-out;
-  }
+  padding: 0 0 1.5em 0;
+  align-items: center;
 `
 
 export const SocialMedia = styled.section`
   max-width: 1000px;
   width: 100%;
+  /* border: red solid 1px; */
 `
 
 export const SocialMediaWrap = styled.div`
   display: flex;
-  justify-content: space-between;
   align-items: center;
   max-width: 1100px;
   margin: 40px auto 0 auto;
+  flex-direction: column;
+  /* border: red solid 1px; */
 
   @media screen and (max-width: 820px) {
     flex-direction: column;
   }
 `
 
-export const SocialLogo = styled(Link)`
-  color: white;
-  /* justify-self: start; */
-  cursor: pointer;
-  text-decoration: none;
-  font-size: 1.5rem;
-  display: flex;
-  align-items: center;
-  margin-bottom: 16px;
-  font-weight: bold;
-`
-
 export const WebsiteRights = styled.small`
   color: white;
-  margin-bottom: 16px;
-`
-
-export const SocialIcons = styled.div`
+  /* border: red solid 1px; */
   display: flex;
-  justify-content: flex-end;
   align-items: center;
-  width: 240px;
-
-  @media screen and (max-width: 820px) {
-    justify-content: center;
-  }
 `
 
 export const SocialIconLink = styled.a`
   color: #94e7d3;
   font-size: 24px;
+  /* border: red solid 1px; */
+`
+
+export const FooterH3 = styled.h3`
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 0.2em;
+`
+
+export const FooterP = styled.p`
+  line-height: 1.8rem;
+  font-size: 1.1rem;
+  text-align: center;
 `

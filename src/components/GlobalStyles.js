@@ -6,6 +6,7 @@ export const GlobalStyles = createGlobalStyle `
 	margin: 0px;
 	padding: 0px;
 	font-family: 'Century Gothic';
+	font-size: 12pt;
 	/* font-size: 12pt;
 	color: #000000; */
 }

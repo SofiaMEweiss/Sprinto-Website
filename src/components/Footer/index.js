@@ -6,15 +6,12 @@ import {
   FooterWrap,
   FooterLinksContainer,
   FooterLinksWrapper,
-  FooterLinkItem,
-  FooterLinkTitle,
-  FooterLink,
-  SocialMedia,
   SocialMediaWrap,
-  SocialLogo,
   WebsiteRights,
   SocialIcons,
   SocialIconLink,
+  FooterH3,
+  FooterP,
 } from "./FooterElements"
 
 const Footer = () => {
@@ -23,65 +20,33 @@ const Footer = () => {
   }
   return (
     <FooterContainer>
-      <FooterWrap>
-        <FooterLinksContainer>
-          <FooterLinksWrapper>
-            <FooterLinkItem>
-              <FooterLinkTitle> About us </FooterLinkTitle>
-              <FooterLink to="/signin"> How it works</FooterLink>
-              <FooterLink to="/signin"> Testimonials</FooterLink>
-              <FooterLink to="/signin"> Careers</FooterLink>
-              <FooterLink to="/signin"> Investors</FooterLink>
-              <FooterLink to="/signin"> Terms of service</FooterLink>
-            </FooterLinkItem>
-            <FooterLinkItem>
-              <FooterLinkTitle> About us </FooterLinkTitle>
-              <FooterLink to="/signin"> How it works</FooterLink>
-              <FooterLink to="/signin"> Testimonials</FooterLink>
-              <FooterLink to="/signin"> Careers</FooterLink>
-              <FooterLink to="/signin"> Investors</FooterLink>
-              <FooterLink to="/signin"> Terms of service</FooterLink>
-            </FooterLinkItem>
-          </FooterLinksWrapper>
-          <FooterLinksWrapper>
-            <FooterLinkItem>
-              <FooterLinkTitle> About us </FooterLinkTitle>
-              <FooterLink to="/signin"> How it works</FooterLink>
-              <FooterLink to="/signin"> Testimonials</FooterLink>
-              <FooterLink to="/signin"> Careers</FooterLink>
-              <FooterLink to="/signin"> Investors</FooterLink>
-              <FooterLink to="/signin"> Terms of service</FooterLink>
-            </FooterLinkItem>
-            <FooterLinkItem>
-              <FooterLinkTitle> About us </FooterLinkTitle>
-              <FooterLink to="/signin"> How it works</FooterLink>
-              <FooterLink to="/signin"> Testimonials</FooterLink>
-              <FooterLink to="/signin"> Careers</FooterLink>
-              <FooterLink to="/signin"> Investors</FooterLink>
-              <FooterLink to="/signin"> Terms of service</FooterLink>
-            </FooterLinkItem>
-          </FooterLinksWrapper>
-        </FooterLinksContainer>
-        <SocialMedia>
-          <SocialMediaWrap>
-            <SocialLogo to="/" onClick={toggleHome}>
-              Sprinto
-            </SocialLogo>
-            <WebsiteRights>
-              Sprinto © {new Date().getFullYear()}All right reserved.
-            </WebsiteRights>
-            <SocialIcons>
-              <SocialIconLink
-                href="//www.linkedin.com/company/sprinto/about/"
-                target="_blank"
-                aria-label="Linkedin"
-              >
-                <FaLinkedin />
-              </SocialIconLink>
-            </SocialIcons>
-          </SocialMediaWrap>
-        </SocialMedia>
-      </FooterWrap>
+      <FooterLinksContainer>
+        <FooterLinksWrapper>
+          <FooterH3>KOM FÖRBI</FooterH3>
+          <FooterP>
+            Magnusladulåsgatan {<br />}
+            1118 63 Stockholm
+          </FooterP>
+        </FooterLinksWrapper>
+        <FooterLinksWrapper>
+          <FooterH3>HÖR AV DIG</FooterH3>
+          <FooterP>Info@sprinto.se{<br />} 070-000 00 00</FooterP>
+        </FooterLinksWrapper>
+        <FooterLinksWrapper>
+          <SocialIconLink
+            href="//www.linkedin.com/company/sprinto/about/"
+            target="_blank"
+            aria-label="Linkedin"
+          >
+            <FaLinkedin size={35} />
+          </SocialIconLink>
+        </FooterLinksWrapper>
+        <SocialMediaWrap>
+          <WebsiteRights>
+            Sprinto © {new Date().getFullYear()}All right reserved.
+          </WebsiteRights>
+        </SocialMediaWrap>
+      </FooterLinksContainer>
     </FooterContainer>
   )
 }
