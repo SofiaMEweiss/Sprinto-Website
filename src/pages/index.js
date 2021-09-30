@@ -11,6 +11,7 @@ import { HeroSection } from "../components/HeroSection"
 import InfoSection from "../components/InfoSection"
 import { homeObjOne, homeObjTwo } from "../components/InfoSection/Data"
 import TeamSection from "../components/TeamSection"
+import Footer from "../components/Footer"
 
 const IndexPage = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -30,6 +31,8 @@ const IndexPage = () => {
       <InfoSection {...homeObjOne} />
       <TeamSection /> {/* </Layout> */}
       <InfoSection {...homeObjTwo} />
+      <Footer />
+
     </div>
   )
 }
