@@ -45,7 +45,7 @@ export const TopLine = styled.p`
   font-size: 1.1rem;
   font-weight: bold;
   text-transform: uppercase;
-  color: #787a80;
+  color: #373e57;
   /* border: red solid 1px; */
 `
 
