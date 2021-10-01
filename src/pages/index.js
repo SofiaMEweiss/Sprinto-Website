@@ -7,7 +7,7 @@ import { GlobalStyles } from "../components/GlobalStyles"
 import Seo from "../components/seo"
 import Navbar from "../components/Navbar"
 import Sidebar from "../components/Sidebar"
-import { HeroSection } from "../components/HeroSection"
+import { HeaderSection } from "../components/HeaderSection"
 import InfoSection from "../components/InfoSection"
 import { homeObjOne, homeObjTwo } from "../components/InfoSection/Data"
 import TeamSection from "../components/TeamSection"
@@ -27,12 +27,11 @@ const IndexPage = () => {
       <Seo title="Home" />
       <Sidebar isOpen={isOpen} toggle={toggle} />
       <Navbar toggle={toggle} />
-      <HeroSection />
+      <HeaderSection />
       <InfoSection {...homeObjOne} />
       <TeamSection /> {/* </Layout> */}
       <InfoSection {...homeObjTwo} />
       <Footer />
-
     </div>
   )
 }
