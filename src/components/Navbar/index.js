@@ -2,22 +2,22 @@ import React, { useState, useEffect } from "react"
 import { FaBars } from "react-icons/fa"
 import { IconContext } from "react-icons/lib"
 import { animateScroll as scroll } from "react-scroll"
+import Logo from "../../images/logo.svg"
 import {
-  Nav,
+  NavWrapper,
   NavbarContainer,
-  NavLogo,
+  NavLogoContainer,
+  LogoIcon,
   MobileIcon,
   NavMenu,
   NavItem,
   NavLinks,
-  NavBtn,
-  NavBtnLink,
 } from "./NavbarElements"
 
 const Navbar = ({ toggle }) => {
   const [scrollNav, setScrollNav] = useState(false)
 
-  //När vi passerar 80 så ska den triggas. Om fönstret på Y led blir större eller lika med 80px så uppdateras state på scrollNav.
+  //Om fönstret på Y led blir större eller lika med 80px så uppdateras state på scrollNav.
   const changeNav = () => {
     if (window.scrollY >= 80) {
       setScrollNav(true)
@@ -35,14 +35,15 @@ const Navbar = ({ toggle }) => {
   }
   return (
     <>
-      <IconContext.Provider value={{ color: "#fff" }}>
-        <Nav scrollNav={scrollNav}>
+      {/* För att alla ikoner ska få en viss färg */}
+      <IconContext.Provider value={{ color: "#000" }}>
+        <NavWrapper scrollNav={scrollNav}>
           <NavbarContainer>
-            <NavLogo to="/" onClick={toggleHome}>
-              Sprinto
-            </NavLogo>
+            <NavLogoContainer to="/" onClick={toggleHome}>
+              <LogoIcon src={Logo} />
+            </NavLogoContainer>
             <MobileIcon onClick={toggle}>
-              <FaBars />
+              <FaBars size={28} />
             </MobileIcon>
             <NavMenu>
               <NavItem>
@@ -69,24 +70,9 @@ const Navbar = ({ toggle }) => {
                   Teamet
                 </NavLinks>
               </NavItem>
-              <NavItem>
-                <NavLinks
-                  to="focus"
-                  smooth={true}
-                  duration={500}
-                  spy={true}
-                  exact="true"
-                  offset={-80}
-                >
-                  Vårt fokus
-                </NavLinks>
-              </NavItem>
             </NavMenu>
-            <NavBtn>
-              <NavBtnLink to="/signup">Jobba hos oss</NavBtnLink>
-            </NavBtn>
           </NavbarContainer>
-        </Nav>
+        </NavWrapper>
       </IconContext.Provider>
     </>
   )

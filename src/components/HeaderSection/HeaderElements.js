@@ -7,7 +7,6 @@ export const HeaderWrapper = styled.header`
   position: relative;
   z-index: 1;
   height: 100vh;
-  padding: 0 30px;
 
   :before {
     content: "";
