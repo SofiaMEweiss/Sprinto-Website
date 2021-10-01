@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 export const FooterWrapper = styled.footer`
   padding: 48px 0 48px 0;
   background-color: #373e57;
-  color: #fff;
+  color: #eeeae7;
 
   @media screen and (max-width: 820px) {
     padding-top: 32px;

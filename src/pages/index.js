@@ -30,7 +30,7 @@ const IndexPage = () => {
       <HeaderSection />
       <InfoSection {...homeObjOne} />
       <TeamSection /> {/* </Layout> */}
-      <InfoSection {...homeObjTwo} />
+      {/* <InfoSection {...homeObjTwo} /> */}
       <Footer />
     </div>
   )

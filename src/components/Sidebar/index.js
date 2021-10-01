@@ -14,7 +14,7 @@ function Sidebar({ isOpen, toggle }) {
   return (
     <SidebarContainer isOpen={isOpen} onClick={toggle}>
       <Icon onClick={toggle}>
-        <CloseIcon />
+        <CloseIcon size={28} />
       </Icon>
       <SidebarWrapper>
         <SidebarMenu>
@@ -24,16 +24,16 @@ function Sidebar({ isOpen, toggle }) {
           <SidebarLink to="team" onClick={toggle}>
             Teamet
           </SidebarLink>
-          <SidebarLink to="focus" onClick={toggle}>
+          {/* <SidebarLink to="focus" onClick={toggle}>
             Vårt fokus
           </SidebarLink>
           <SidebarLink to="signup" onClick={toggle}>
             Jobba hos oss
-          </SidebarLink>
+          </SidebarLink> */}
         </SidebarMenu>
-        <SideBtnWrap>
+        {/* <SideBtnWrap>
           <SidebarRoute to="/signup">Jobba hos oss</SidebarRoute>
-        </SideBtnWrap>
+        </SideBtnWrap> */}
       </SidebarWrapper>
     </SidebarContainer>
   )
