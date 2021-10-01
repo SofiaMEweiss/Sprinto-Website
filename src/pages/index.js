@@ -8,8 +8,8 @@ import Seo from "../components/seo"
 import Navbar from "../components/Navbar"
 import Sidebar from "../components/Sidebar"
 import { HeaderSection } from "../components/HeaderSection"
-import InfoSection from "../components/InfoSection"
-import { homeObjOne, homeObjTwo } from "../components/InfoSection/Data"
+import AboutSection from "../components/AboutSection"
+import { aboutObj } from "../components/AboutSection/Data"
 import TeamSection from "../components/TeamSection"
 import Footer from "../components/Footer"
 
@@ -28,9 +28,8 @@ const IndexPage = () => {
       <Sidebar isOpen={isOpen} toggle={toggle} />
       <Navbar toggle={toggle} />
       <HeaderSection />
-      <InfoSection {...homeObjOne} />
+      <AboutSection {...aboutObj} />
       <TeamSection /> {/* </Layout> */}
-      {/* <InfoSection {...homeObjTwo} /> */}
       <Footer />
     </div>
   )

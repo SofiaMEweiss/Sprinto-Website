@@ -1,31 +1,28 @@
 import React from "react"
 import { useEffect } from "react"
 import { Button } from "../ButtonElement"
-// import image from "../../images/programming.svg"
 
 import {
-  InfoContainer,
-  InfoWrapper,
-  InfoRow,
-  Column1,
-  Column2,
-  TextWrapper,
+  AboutWrapper,
+  AboutContainer,
+  GridContainer,
+  ContentContainer,
+  TextContainer,
   TopLine,
   Heading,
   Subtitle,
-  BtnWrap,
-  ImgWrap,
+  Typewriter,
+  Cursor,
+  Contact,
+  BtnContainer,
+  ImgContainer,
   Img,
 } from "./InfoElements"
 
 const InfoSection = ({
-  lightBg,
   id,
-  imgStart,
   topLine,
-  lightText,
   headline,
-  darkText,
   description,
   buttonLabel,
   img,
@@ -53,22 +50,21 @@ const InfoSection = ({
 
   return (
     <>
-      <InfoContainer lightBg={lightBg} id={id}>
-        <InfoWrapper>
-          <InfoRow imgStart={imgStart}>
-            <Column1>
-              <TextWrapper>
+      <AboutWrapper id={id}>
+        <AboutContainer>
+          <GridContainer>
+            <ContentContainer>
+              <TextContainer>
                 <TopLine> {topLine} </TopLine>
-                <Heading lightText={lightText}> {headline} </Heading>
-                <Subtitle darkText={darkText}> {description} </Subtitle>
-                <Subtitle darkText={darkText}>
-                  Vi söker alltid efter <span id="typewriterMessage"></span>
-                  <span>_</span>{" "}
-                  <Subtitle darkText={darkText}>
-                    kollegor. Ska vi ta en fika?
-                  </Subtitle>
-                </Subtitle>
-                <BtnWrap>
+                <Heading> {headline} </Heading>
+                <Subtitle> {description} </Subtitle>
+                <Contact>
+                  Vi söker alltid efter
+                  <Typewriter id="typewriterMessage"></Typewriter>
+                  <Cursor>_</Cursor>
+                  <Contact>kollegor. Ska vi ta en fika?</Contact>
+                </Contact>
+                <BtnContainer>
                   <Button
                     to="home"
                     smooth={true}
@@ -83,17 +79,17 @@ const InfoSection = ({
                   >
                     {buttonLabel}
                   </Button>
-                </BtnWrap>
-              </TextWrapper>
-            </Column1>
-            <Column2>
-              <ImgWrap>
+                </BtnContainer>
+              </TextContainer>
+            </ContentContainer>
+            <ContentContainer>
+              <ImgContainer>
                 <Img src={img} alt={alt} />
-              </ImgWrap>
-            </Column2>
-          </InfoRow>
-        </InfoWrapper>
-      </InfoContainer>
+              </ImgContainer>
+            </ContentContainer>
+          </GridContainer>
+        </AboutContainer>
+      </AboutWrapper>
     </>
   )
 }

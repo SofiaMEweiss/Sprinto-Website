@@ -52,7 +52,6 @@ export const SidebarLink = styled(LinkS)`
   text-transform: uppercase;
   text-decoration: none;
   list-style: none;
-  transition: 0ms.2s ease-in-out;
   cursor: pointer;
 
   &:hover {

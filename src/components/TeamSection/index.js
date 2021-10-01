@@ -23,7 +23,7 @@ const TeamSection = () => {
         <TeamCard>
           <TeamIcon src={ProfilePic} />
           <TeamH2>Namn</TeamH2>
-          <TeamP>Fredrik gillar</TeamP>
+          <TeamP>Beskrivning</TeamP>
         </TeamCard>
       </TeamWrapper>
     </TeamContainer>
