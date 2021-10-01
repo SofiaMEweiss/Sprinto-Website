@@ -84,6 +84,10 @@ export const NavLinks = styled(LinkS)`
   text-transform: uppercase;
   cursor: pointer;
 
+  &:hover {
+    color: #353434;
+    transition: 0.2s ease-in-out;
+  }
   &.active {
     border-bottom: 3px solid #f7a58f;
   }
