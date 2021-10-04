@@ -1,6 +1,7 @@
 import React from "react"
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import { Button } from "../ButtonElement"
+import { Modal } from "../Modal"
 
 import {
   AboutWrapper,
@@ -48,6 +49,13 @@ const InfoSection = ({
     }
   }
 
+  const [showModal, setShowModal] = useState(false)
+
+  //Ändrar state från förgående, för att toggla modalen
+  const openModal = () => {
+    setShowModal(prev => !prev)
+  }
+
   return (
     <>
       <AboutWrapper id={id}>
@@ -55,17 +63,16 @@ const InfoSection = ({
           <GridContainer>
             <ContentContainer>
               <TextContainer>
-                <TopLine> {topLine} </TopLine>
-                <Heading> {headline} </Heading>
-                <Subtitle> {description} </Subtitle>
+                <TopLine> {topLine} </TopLine> <Heading> {headline} </Heading>{" "}
+                <Subtitle> {description} </Subtitle>{" "}
                 <Contact>
-                  Vi söker alltid efter
-                  <Typewriter id="typewriterMessage"></Typewriter>
-                  <Cursor>_</Cursor>
-                  <Contact>kollegor. Ska vi ta en fika?</Contact>
-                </Contact>
+                  Vi söker alltid efter{" "}
+                  <Typewriter id="typewriterMessage"> </Typewriter>{" "}
+                  <Cursor> _ </Cursor>{" "}
+                  <Contact> kollegor.Ska vi ta en fika ? </Contact>{" "}
+                </Contact>{" "}
                 <BtnContainer>
-                  <Button
+                  {/* <Button
                     to="home"
                     smooth={true}
                     duration={500}
@@ -76,20 +83,29 @@ const InfoSection = ({
                     big={big}
                     primary={primary}
                     dark={dark}
+                    onClick={openModal}
+                  > */}
+                  <Button
+                    fontBig={fontBig}
+                    big={big}
+                    primary={primary}
+                    dark={dark}
+                    onClick={openModal}
                   >
-                    {buttonLabel}
+                    {buttonLabel}{" "}
                   </Button>
-                </BtnContainer>
-              </TextContainer>
-            </ContentContainer>
+                  <Modal showModal={showModal} setShowModal={setShowModal} />
+                </BtnContainer>{" "}
+              </TextContainer>{" "}
+            </ContentContainer>{" "}
             <ContentContainer>
               <ImgContainer>
-                <Img src={img} alt={alt} />
-              </ImgContainer>
-            </ContentContainer>
-          </GridContainer>
-        </AboutContainer>
-      </AboutWrapper>
+                <Img src={img} alt={alt} />{" "}
+              </ImgContainer>{" "}
+            </ContentContainer>{" "}
+          </GridContainer>{" "}
+        </AboutContainer>{" "}
+      </AboutWrapper>{" "}
     </>
   )
 }
