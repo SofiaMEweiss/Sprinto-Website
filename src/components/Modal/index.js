@@ -29,6 +29,13 @@ export const Modal = ({
   //   const [controlledPhoneNumber, setControlledPhoneNumber] = useState("")
   const [phoneNumberTouched, setPhoneNumberTouched] = useState(false)
 
+  
+  if (showModal) {
+    document.body.style.overflow = 'hidden';
+  } else {
+    document.body.style.overflow = 'auto';
+  }
+
   const allowedPhoneNumberCharacters = "0123456789"
   let phoneNumberIsValid = true
   let phoneNumberErrorMessage = ""
@@ -44,10 +51,6 @@ export const Modal = ({
     phoneNumberErrorMessage = "Vänligen skriv din telefonnummer med siffror"
   }
 
-  let phoneNumberClass = ""
-  if (phoneNumberTouched) {
-    phoneNumberClass = phoneNumberIsValid ? "valid" : "error"
-  }
 
   const modalRef = useRef()
   //För att kunna stänga modal vid klick på bakgrund och ändra state tillbaka till false
@@ -100,7 +103,8 @@ export const Modal = ({
                     // setControlledPhoneNumber(event.target.value)
                   }}
                   value={phoneNumber}
-                  className={phoneNumberClass}
+                  valid={phoneNumberIsValid}
+                  touched={phoneNumberTouched}
                 />
               </ModalLabel>
               {phoneNumberTouched ? (

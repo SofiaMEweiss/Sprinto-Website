@@ -49,7 +49,8 @@ const InfoSection = ({
     }
   }
 
-  const [showModal, setShowModal] = useState(false)
+  const [showModal, setShowModal] = useState(false);
+
 
   //Ändrar state från förgående, för att toggla modalen
   const openModal = () => {

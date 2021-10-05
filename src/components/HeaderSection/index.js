@@ -14,7 +14,7 @@ export const HeaderSection = () => {
   return (
     <HeaderWrapper id="home">
       <HeaderBgContainer>
-        <HeaderVideoBg autoPlay muted loop src={Video} type="video/mp4" />
+        <HeaderVideoBg autoPlay playsinline muted loop src={Video} type="video/mp4" />
       </HeaderBgContainer>
       <HeaderContentContainer>
         <HeaderH1>Vi utvecklar teknik för människor</HeaderH1>

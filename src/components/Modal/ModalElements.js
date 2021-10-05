@@ -100,6 +100,7 @@ export const ModalInput = styled.input`
   font-size: 1.1em;
   margin-top: 10px;
   /* padding: 0 30px 0 30px; */
+  ${ props => props.touched ? (props.valid ? 'border-color: green;' : 'border-color: red;') : '' }
 `
 
 export const ModalTop = styled.div`
