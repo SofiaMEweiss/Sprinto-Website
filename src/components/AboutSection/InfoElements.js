@@ -88,20 +88,7 @@ export const Contact = styled.p `
   }
 `
 
-export const Typewriter = styled.span `
-  margin: 0 0 15px 4px;
-  font-size: 1.3rem;
-  line-height: 32px;
-  color: #000;
-  font-weight: bold;
-  background: #f7a58f;
-  padding: 0 4px;
-  /* border: red solid 1px; */
-  @media screen and (max-width: 768px) {
-    text-align: center;
-    font-size: 1.1rem;
-  }
-`
+
 export const Cursor = styled.span `
   margin-bottom: 15px;
   font-size: 1.3rem;

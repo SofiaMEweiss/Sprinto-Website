@@ -12,13 +12,15 @@ import {
   TopLine,
   Heading,
   Subtitle,
-  Typewriter,
   Cursor,
   Contact,
   BtnContainer,
   ImgContainer,
   Img,
-} from "./InfoElements"
+} from "./InfoElements";
+import Typewriter from './Typewriter';
+
+
 
 const InfoSection = ({
   id,
@@ -33,21 +35,16 @@ const InfoSection = ({
   primary,
   dark,
 }) => {
-  const messageToType = "Härliga"
-  let cursorPosition = 0
-  const typewriterspeed = 200
+  const allMessages = ["Härliga", "Roliga", "Trevliga"];
 
-  useEffect(typewriter)
+  // function typewriter() {
+  //   setTypewriterText(messageToType.substring(0, cursorPosition));
+  //   cursorPosition++
 
-  function typewriter() {
-    const span = document.getElementById("typewriterMessage")
-    span.innerHTML = messageToType.substring(0, cursorPosition)
-    cursorPosition++
-
-    if (cursorPosition <= messageToType.length) {
-      setTimeout(typewriter, typewriterspeed)
-    }
-  }
+  //   if (cursorPosition <= messageToType.length) {
+  //     setTimeout(typewriter, typewriterspeed)
+  //   }
+  // }
 
   const [showModal, setShowModal] = useState(false);
 
@@ -68,7 +65,7 @@ const InfoSection = ({
                 <Subtitle> {description} </Subtitle>{" "}
                 <Contact>
                   Vi söker alltid efter{" "}
-                  <Typewriter id="typewriterMessage"> </Typewriter>{" "}
+                  <Typewriter words={allMessages}></Typewriter>{" "}
                   <Cursor> _ </Cursor>{" "}
                   <Contact> kollegor. Ska vi ta en fika ? </Contact>{" "}
                 </Contact>{" "}
