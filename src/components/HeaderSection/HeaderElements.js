@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-export const HeaderWrapper = styled.header`
+export const HeaderWrapper = styled.header `
   display: flex;
   justify-content: center;
   align-items: center;
@@ -25,7 +25,7 @@ export const HeaderWrapper = styled.header`
   }
 `
 
-export const HeaderBgContainer = styled.div`
+export const HeaderBgContainer = styled.div `
   position: absolute;
   top: 0;
   right: 0;
@@ -34,7 +34,7 @@ export const HeaderBgContainer = styled.div`
   overflow: hidden;
 `
 
-export const HeaderVideoBg = styled.video`
+export const HeaderVideoBg = styled.video `
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -42,14 +42,14 @@ export const HeaderVideoBg = styled.video`
   filter: grayscale(80%);
 `
 
-export const HeaderContentContainer = styled.div`
+export const HeaderContentContainer = styled.div `
   display: flex;
   align-items: center;
   position: absolute;
   z-index: 3;
 `
 
-export const HeaderH1 = styled.h1`
+export const HeaderH1 = styled.h1 `
   color: #000;
   text-align: center;
   font-size: 4rem;

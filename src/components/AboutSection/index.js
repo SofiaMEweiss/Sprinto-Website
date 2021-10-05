@@ -1,7 +1,8 @@
 import React from "react"
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import { Button } from "../ButtonElement"
 import { Modal } from "../Modal"
+import { modalObj } from "../Modal/Data"
 
 import {
   AboutWrapper,
@@ -17,10 +18,8 @@ import {
   BtnContainer,
   ImgContainer,
   Img,
-} from "./InfoElements";
-import Typewriter from './Typewriter';
-
-
+} from "./InfoElements"
+import Typewriter from "./Typewriter"
 
 const InfoSection = ({
   id,
@@ -35,8 +34,8 @@ const InfoSection = ({
   primary,
   dark,
 }) => {
-  const allMessages = ["Härliga", "Roliga", "Trevliga"];
-  const [showModal, setShowModal] = useState(false);
+  const allMessages = ["Härliga", "Roliga", "Trevliga"]
+  const [showModal, setShowModal] = useState(false)
 
   //Ändrar state från förgående, för att toggla modalen
   const openModal = () => {
@@ -51,7 +50,7 @@ const InfoSection = ({
             <ContentContainer>
               <TextContainer>
                 <TopLine> {topLine} </TopLine> <Heading> {headline} </Heading>{" "}
-                <Subtitle> {description} </Subtitle>{" "}
+                <Subtitle> {description}</Subtitle>{" "}
                 <Contact>
                   Vi söker alltid efter{" "}
                   <Typewriter words={allMessages}></Typewriter>{" "}
@@ -81,7 +80,11 @@ const InfoSection = ({
                   >
                     {buttonLabel}{" "}
                   </Button>
-                  <Modal showModal={showModal} setShowModal={setShowModal} />
+                  <Modal
+                    showModal={showModal}
+                    setShowModal={setShowModal}
+                    {...modalObj}
+                  />
                 </BtnContainer>{" "}
               </TextContainer>{" "}
             </ContentContainer>{" "}

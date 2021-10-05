@@ -2,136 +2,142 @@ import styled from "styled-components"
 import { FaTimes } from "react-icons/fa"
 
 export const Background = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 100%;
   position: fixed;
-  overflow: hidden;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  /* top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); */
-  background: rgba(0, 0, 0, 0.8);
   z-index: 1000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background: rgba(0, 0, 0, 0.8);
 `
 
-export const ModalContainer = styled.div`
-  width: 100%;
-  max-width: 700px;
+export const ModalWrapper = styled.section`
+  width: 720px;
   height: 550px;
-  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.2);
-  background: #373e57;
-  color: #fff;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 8fr;
-  position: relative;
-  z-index: 10;
-  border-radius: 10px;
-  padding: 20px;
-  /* border: red solid 1px; */
+  padding: 1.5em;
+  background: #373e57;
+  border-radius: 0.8em;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  color: #fff;
+
   @media screen and (max-width: 660px) {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 0fr 8fr;
-    /* grid-template-rows: 1fr 1fr 1fr; */
   }
+`
+export const ModalTopContainer = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  grid-column: 1/3;
+`
+
+export const CloseModalIcon = styled(FaTimes)`
+  cursor: pointer;
+`
+
+export const ModalLeftContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  padding-right: 1em;
+
+  @media screen and (max-width: 660px) {
+    padding-right: 0px;
+  } ;
 `
 
 export const ModalImg = styled.img`
-  /* height: 160px; */
   width: 100%;
-  /* border: red solid 1px; */
 
-  @media screen and (max-width: 540px) {
+  @media screen and (max-width: 660px) {
     display: none;
   } ;
 `
 
-export const ModalLeft = styled.div`
-  display: flex;
-  justify-content: center;
-  /* border: red solid 1px; */
-`
-
-export const ModalRight = styled.div`
+export const ModalRightContainer = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  /* justify-content: space-around; */
-  /* border: red solid 1px; */
-`
+  justify-content: space-around;
+  padding-left: 1em;
 
-export const ModalH2 = styled.h2`
-  /* border: red solid 1px; */
+  @media screen and (max-width: 660px) {
+    padding-left: 0px;
+    text-align: center;
+    grid-row: 2/4;
+  } ;
+`
+export const ModalTextContainer = styled.div``
+
+export const ModalHeading = styled.h2`
   display: flex;
-  /* justify-content: center; */
-  padding: 0 30px 10px 30px;
-`
-
-export const ModalP = styled.p`
-  /* border: red solid 1px; */
-  display: flex;
-  justify-content: center;
-  /* text-align: center; */
-  padding: 0 30px 50px 30px;
-`
-
-export const ModalLabel = styled.label`
-  /* border: red solid 1px; */
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: bold;
-  /* display: flex;
-	justify-content: center; */
-  text-align: center;
-  padding: 0 30px 10px 30px;
+  line-height: 3rem;
+
+  @media screen and (max-width: 660px) {
+    justify-content: center;
+  }
+
+  @media screen and (max-width: 400px) {
+    font-size: 1.3rem;
+  }
+
+  @media screen and (max-width: 320px) {
+    font-size: 1.1rem;
+    line-height: 2.5rem;
+  }
+
+  @media screen and (max-width: 280px) {
+    font-size: 1rem;
+    line-height: 2.3rem;
+  } ;
+`
+
+export const ModalSubtitle = styled.p`
+  display: flex;
+  font-size: 1rem;
+  line-height: 1.5rem;
+`
+export const ModalFormContainer = styled.form``
+export const ModalLabel = styled.label`
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid #fff;
 `
 
 export const ModalInput = styled.input`
-  /* border: red solid 1px; */
-  width: 50%;
-  padding-left: 0.5em;
-  border-radius: 0.3em;
-  border-width: 3px;
-  font-size: 1.1em;
-  margin-top: 10px;
-  /* padding: 0 30px 0 30px; */
-  ${ props => props.touched ? (props.valid ? 'border-color: green;' : 'border-color: red;') : '' }
-`
+  width: 100%;
+  font-size: 1rem;
+  letter-spacing: 0.2rem;
+  padding: 0.5em 0 0.2em 1em;
+  border-radius: 1em;
+  outline: inherit;
+  border: none;
+  color: #94e7d3;
+  text-align: center;
+  background-color: #373e57;
+  /* ${props =>
+    props.touched
+      ? props.valid
+        ? "border-color: green;"
+        : "border-color: red;"
+      : ""}  */
 
-export const ModalTop = styled.div`
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  grid-column: 1/3;
-  /* border: red solid 1px; */
-
-  @media screen and (max-width: 660px) {
-    grid-column: 1/2;
-    /* grid-template-rows: 1fr 1fr 1fr; */
+  ::placeholder {
+    letter-spacing: 0rem;
+    color: #a09c9c;
   }
 `
-
-export const CloseModalButton = styled(FaTimes)`
-  cursor: pointer;
+export const ModalBtnContainer = styled.div`
   display: flex;
   justify-content: center;
-  align-items: center;
-  width: 40px;
-  height: 40px;
-  z-index: 10;
-  padding: 0 20px 0 0;
-  /* grid-column: 1/3; */
-  /* border: red solid 1px; */
-`
-
-export const BtnContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  padding: 20px 0 20px 0;
-  /* border: red solid 1px; */
+  padding: 1.5em 0 3em 0;
 `
