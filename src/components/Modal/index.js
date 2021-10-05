@@ -11,6 +11,7 @@ import {
   ModalLabel,
   ModalInput,
   BtnContainer,
+  ModalTop,
 } from "./ModalElements"
 import Modalpic from "../../images/modalpic2.svg"
 import "./Modal.css"
@@ -75,18 +76,19 @@ export const Modal = ({
       {showModal ? (
         <Background ref={modalRef} onClick={closeModal}>
           <ModalContainer showModal={showModal}>
+            <ModalTop>
+              <CloseModalButton onClick={() => setShowModal(prev => !prev)} />
+            </ModalTop>
             <ModalLeft>
               <ModalImg src={Modalpic} />
             </ModalLeft>
             <ModalRight>
-              <CloseModalButton onClick={() => setShowModal(prev => !prev)} />
               <ModalH2>Kontakta mig om tid att ses</ModalH2>
               <ModalP>
                 Är du intresserad av att veta mer om Sprinto? Vi bjuder gärna på
                 fika och berättar. Fyll i ditt telefonnummer nedan så ringer vi
                 upp dig innan lunch/dagen är slut.
               </ModalP>
-
               <ModalLabel>
                 Skriv ditt telefonnummer <br />
                 <ModalInput
