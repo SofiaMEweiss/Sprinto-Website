@@ -34,10 +34,12 @@ export const Modal = ({
   //   const [controlledPhoneNumber, setControlledPhoneNumber] = useState("")
   const [phoneNumberTouched, setPhoneNumberTouched] = useState(false)
 
-  if (showModal) {
-    document.body.style.overflow = "hidden"
-  } else {
-    document.body.style.overflow = "auto"
+  if (typeof document !== "undefined") {
+    if (showModal) {
+      document.body.style.overflow = "hidden"
+    } else {
+      document.body.style.overflow = "auto"
+    }
   }
 
   const allowedPhoneNumberCharacters = "0123456789"
