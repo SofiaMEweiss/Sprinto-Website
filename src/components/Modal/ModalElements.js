@@ -25,14 +25,15 @@ export const ModalContainer = styled.div`
   max-width: 700px;
   height: 550px;
   box-shadow: 0 5px 16px rgba(0, 0, 0, 0.2);
-  background: #fff;
-  color: #000;
+  background: #373e57;
+  color: #fff;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 8fr;
   position: relative;
   z-index: 10;
   border-radius: 10px;
+  padding: 20px;
   /* border: red solid 1px; */
   @media screen and (max-width: 660px) {
     grid-template-columns: 1fr;
@@ -69,7 +70,7 @@ export const ModalH2 = styled.h2`
   /* border: red solid 1px; */
   display: flex;
   /* justify-content: center; */
-  padding: 0 30px 0 30px;
+  padding: 0 30px 10px 30px;
 `
 
 export const ModalP = styled.p`
@@ -77,17 +78,17 @@ export const ModalP = styled.p`
   display: flex;
   justify-content: center;
   /* text-align: center; */
-  padding: 0 30px 30px 30px;
+  padding: 0 30px 50px 30px;
 `
 
 export const ModalLabel = styled.label`
   /* border: red solid 1px; */
-  font-size: 0.9em;
+  font-size: 1rem;
   font-weight: bold;
   /* display: flex;
 	justify-content: center; */
   text-align: center;
-  padding: 0 30px 0 30px;
+  padding: 0 30px 10px 30px;
 `
 
 export const ModalInput = styled.input`
@@ -97,7 +98,8 @@ export const ModalInput = styled.input`
   border-radius: 0.3em;
   border-width: 3px;
   font-size: 1.1em;
-  padding: 0 30px 0 30px;
+  margin-top: 10px;
+  /* padding: 0 30px 0 30px; */
 `
 
 export const ModalTop = styled.div`
@@ -129,6 +131,6 @@ export const CloseModalButton = styled(FaTimes)`
 export const BtnContainer = styled.div`
   display: flex;
   justify-content: center;
-  padding: 0 0 20px 0;
+  padding: 20px 0 20px 0;
   /* border: red solid 1px; */
 `

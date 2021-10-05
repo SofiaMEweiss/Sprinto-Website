@@ -69,7 +69,7 @@ const InfoSection = ({
                   Vi söker alltid efter{" "}
                   <Typewriter id="typewriterMessage"> </Typewriter>{" "}
                   <Cursor> _ </Cursor>{" "}
-                  <Contact> kollegor.Ska vi ta en fika ? </Contact>{" "}
+                  <Contact> kollegor. Ska vi ta en fika ? </Contact>{" "}
                 </Contact>{" "}
                 <BtnContainer>
                   {/* <Button
