@@ -36,18 +36,7 @@ const InfoSection = ({
   dark,
 }) => {
   const allMessages = ["Härliga", "Roliga", "Trevliga"];
-
-  // function typewriter() {
-  //   setTypewriterText(messageToType.substring(0, cursorPosition));
-  //   cursorPosition++
-
-  //   if (cursorPosition <= messageToType.length) {
-  //     setTimeout(typewriter, typewriterspeed)
-  //   }
-  // }
-
   const [showModal, setShowModal] = useState(false);
-
 
   //Ändrar state från förgående, för att toggla modalen
   const openModal = () => {
