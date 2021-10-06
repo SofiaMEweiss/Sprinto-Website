@@ -124,6 +124,7 @@ export const ModalInput = styled.input`
   color: #94e7d3;
   text-align: center;
   background-color: #373e57;
+  transition: width 0.4s ease-in-out;
   /* ${props =>
     props.touched
       ? props.valid
