@@ -1,32 +1,37 @@
 import React from "react"
 import ProfilePic from "../../images/profile.svg"
 import {
-  TeamContainer,
-  TeamH1,
   TeamWrapper,
+  TeamW,
   TeamCard,
   TeamH2,
   TeamP,
   TeamIcon,
+  TopLine,
+  TeamContainer,
+  TextContainer,
 } from "./TeamElements"
+import { employees } from "../TeamSection/Data"
 
 const TeamSection = () => {
   return (
-    <TeamContainer id="team">
-      <TeamH1>Team</TeamH1>
-      <TeamWrapper>
-        <TeamCard>
-          <TeamIcon src={ProfilePic} />
-          <TeamH2>Namn</TeamH2>
-          <TeamP>Beskrivning</TeamP>
-        </TeamCard>
-        <TeamCard>
-          <TeamIcon src={ProfilePic} />
-          <TeamH2>Namn</TeamH2>
-          <TeamP>Beskrivning</TeamP>
-        </TeamCard>
-      </TeamWrapper>
-    </TeamContainer>
+    <TeamWrapper id="team">
+      <TeamContainer>
+        <TextContainer>
+          <TopLine>Team sprinto </TopLine>
+        </TextContainer>
+        <TeamW>
+          {employees.map(employee => (
+            <TeamCard>
+              <TeamIcon src={ProfilePic} />{" "}
+              <TeamH2> {employee.fullName} </TeamH2>
+              <TeamP> {employee.title} </TeamP>
+              <TeamP> {employee.description} </TeamP>
+            </TeamCard>
+          ))}
+        </TeamW>{" "}
+      </TeamContainer>
+    </TeamWrapper>
   )
 }
 

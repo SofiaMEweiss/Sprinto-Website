@@ -1,10 +1,10 @@
 import styled from "styled-components"
 
-export const AboutWrapper = styled.section `
+export const AboutWrapper = styled.section`
   background: #fff;
 `
 
-export const AboutContainer = styled.div `
+export const AboutContainer = styled.div`
   max-width: 1400px;
   z-index: 1;
   margin: auto;
@@ -15,41 +15,37 @@ export const AboutContainer = styled.div `
   }
 `
 
-export const GridContainer = styled.div `
+export const GridContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1;
-  /* border: red solid 1px; */
 
   @media screen and (max-width: 768px) {
     grid-template-columns: 1fr;
   }
 `
 
-export const ContentContainer = styled.div `
+export const ContentContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 15px;
-  /* border: red solid 1px; */
+  /* padding: 0 15px; */
 `
 
-export const TextContainer = styled.div `
-  max-width: 540px;
-  padding: 60px 0;
-  /* border: red solid 1px; */
+export const TextContainer = styled.div`
+  /* max-width: 540px; */
+  padding: 60px 15px;
 `
 
-export const TopLine = styled.p `
+export const TopLine = styled.p`
   margin-bottom: 48px;
   font-size: 1.1rem;
   font-weight: bold;
   text-transform: uppercase;
   color: #373e57;
-  /* border: red solid 1px; */
 `
 
-export const Heading = styled.h1 `
+export const Heading = styled.h1`
   margin-bottom: 24px;
   font-size: 3rem;
   line-height: 1.2;
@@ -62,7 +58,7 @@ export const Heading = styled.h1 `
   }
 `
 
-export const Subtitle = styled.p `
+export const Subtitle = styled.p`
   margin-bottom: 35px;
   font-size: 1.3rem;
   line-height: 1.5;
@@ -74,7 +70,7 @@ export const Subtitle = styled.p `
   }
 `
 
-export const Contact = styled.p `
+export const Contact = styled.p`
   margin-bottom: 15px;
   font-size: 1.3rem;
   line-height: 1.5;
@@ -88,8 +84,7 @@ export const Contact = styled.p `
   }
 `
 
-
-export const Cursor = styled.span `
+export const Cursor = styled.span`
   margin-bottom: 15px;
   font-size: 1.3rem;
   line-height: 32px;
@@ -111,7 +106,7 @@ export const Cursor = styled.span `
   /* border: red solid 1px; */
 `
 
-export const BtnContainer = styled.div `
+export const BtnContainer = styled.div`
   display: flex;
 
   @media screen and (max-width: 768px) {
@@ -120,7 +115,7 @@ export const BtnContainer = styled.div `
   /* border: red solid 1px; */
 `
 
-export const ImgContainer = styled.div `
+export const ImgContainer = styled.div`
   max-width: 555px;
   height: 100%;
   /* border: red solid 1px; */
@@ -129,7 +124,7 @@ export const ImgContainer = styled.div `
   justify-content: center;
 `
 
-export const Img = styled.img `
+export const Img = styled.img`
   width: 100%;
   margin: 0 0 10px 0;
   padding-right: 0;

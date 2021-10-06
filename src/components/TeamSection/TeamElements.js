@@ -1,30 +1,53 @@
 import styled from "styled-components"
 
-export const TeamContainer = styled.div`
-  height: 800px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+export const TeamWrapper = styled.section`
   background: #eeeae7;
+`
+
+export const TeamContainer = styled.div`
+  max-width: 1400px;
+  z-index: 1;
+  margin: auto;
+  padding: 0 24px;
+  /* border: red solid 1px; */
 
   @media screen and (max-width: 768px) {
-    height: 1100px;
-  }
-
-  @media screen and (max-width: 480px) {
-    height: 1300px;
+    padding: 0 0 60px 0;
   }
 `
 
-export const TeamWrapper = styled.div`
-  max-width: 1000px;
+export const TextContainer = styled.div`
+  /* max-width: 540px; */
+  padding: 60px 15px 0 15px;
+
+  /* border: red solid 1px; */
+`
+
+// export const TeamWr = styled.div`
+//   /* height: 1800px; */
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   align-items: center;
+//   background: #eeeae7;
+
+//   @media screen and (max-width: 768px) {
+//     height: 1100px;
+//   }
+
+//   @media screen and (max-width: 480px) {
+//     height: 1300px;
+//   }
+// `
+
+export const TeamW = styled.div`
+  max-width: 1500px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
   align-items: center;
-  grid-gap: 16px;
-  padding: 0 50px;
+  grid-gap: 60px;
+  padding: 0 0 60px 0;
 
   /* @media screen and (max-width: 1000px) {
     grid-template-columns: 1fr 1fr;
@@ -41,17 +64,21 @@ export const TeamCard = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: center;
+  /* align-items: center; */
   border-radius: 10px;
-  max-height: 340px;
+  height: 480px;
   padding: 30px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   transition: all 0.2s ease-in-out;
+  margin: 15px;
 
   &:hover {
     transform: scale(1.02);
     transition: all 0.2s ease-in-out;
-    cursor: pointer;
+  }
+
+  @media screen and (max-width: 768px) {
+    height: auto;
   }
 `
 
@@ -61,21 +88,20 @@ export const TeamIcon = styled.img`
   margin-bottom: 10px;
 `
 
-export const TeamH1 = styled.h1`
-  font-size: 2.5rem;
-  color: black;
-  margin-bottom: 64px;
-
-  @media screen and (max-width: 480px) {
-    font-size: 2rem;
-  }
-`
-
 export const TeamH2 = styled.h2`
   font-size: 1rem;
   margin-bottom: 10px;
 `
 export const TeamP = styled.p`
   font-size: 1rem;
-  text-align: center;
+  /* text-align: center; */
+`
+
+export const TopLine = styled.p`
+  margin-bottom: 48px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #373e57;
+  /* border: red solid 1px; */
 `
