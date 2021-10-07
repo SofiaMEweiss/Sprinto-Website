@@ -137,6 +137,12 @@ export const ModalInput = styled.input`
     color: #a09c9c;
   }
 `
+
+export const HiddenMessage = styled.p`
+  padding: 0.5em 0 0 0;
+  text-align: center;
+`
+
 export const ModalBtnContainer = styled.div`
   display: flex;
   justify-content: center;

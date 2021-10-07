@@ -1,5 +1,4 @@
 import React from "react"
-import ProfilePic from "../../images/profile.svg"
 import {
   TeamWrapper,
   TeamW,
@@ -22,8 +21,8 @@ const TeamSection = () => {
         </TextContainer>
         <TeamW>
           {employees.map(employee => (
-            <TeamCard>
-              <TeamIcon src={ProfilePic} />{" "}
+            <TeamCard key={employee.id}>
+              <TeamIcon src={employee.img} />{" "}
               <TeamH2> {employee.fullName} </TeamH2>
               <TeamP> {employee.title} </TeamP>
               <TeamP> {employee.description} </TeamP>

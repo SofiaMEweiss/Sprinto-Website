@@ -23,23 +23,6 @@ export const TextContainer = styled.div`
   /* border: red solid 1px; */
 `
 
-// export const TeamWr = styled.div`
-//   /* height: 1800px; */
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: center;
-//   align-items: center;
-//   background: #eeeae7;
-
-//   @media screen and (max-width: 768px) {
-//     height: 1100px;
-//   }
-
-//   @media screen and (max-width: 480px) {
-//     height: 1300px;
-//   }
-// `
-
 export const TeamW = styled.div`
   max-width: 1500px;
   margin: 0 auto;

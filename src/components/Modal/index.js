@@ -14,9 +14,9 @@ import {
   ModalFormContainer,
   ModalLabel,
   ModalInput,
+  HiddenMessage,
   ModalBtnContainer,
 } from "./ModalElements"
-import "./Modal.css"
 
 export const Modal = ({
   showModal,
@@ -116,9 +116,7 @@ export const Modal = ({
                   />
                 </ModalLabel>
                 {phoneNumberTouched ? (
-                  <div className="message-hidden">
-                    {phoneNumberErrorMessage}
-                  </div>
+                  <HiddenMessage>{phoneNumberErrorMessage}</HiddenMessage>
                 ) : null}
                 <ModalBtnContainer>
                   <Button
