@@ -1,0 +1,12 @@
+
+    @import url("https://fast.fonts.net/lt/1.css?apiType=css&c=d346487a-9781-401b-acb7-ca1df1fc7bb8&fontids=5219390,5321689");
+    @font-face{
+        font-family:"Century Gothic W05 Bold";
+        src:url("Fonts/5219390/9582dc06-7a4d-4a55-8dfc-aa69cd8b8436.woff2") format("woff2"),url("Fonts/5219390/656df9bb-f6e1-46a8-8a37-1c73ff3bbdf9.woff") format("woff");
+    }
+    @font-face{
+        font-family:"Century Gothic W05 Regular";
+        src:url("Fonts/5321689/d722f0d1-f586-442f-83de-f80218687a92.woff2") format("woff2"),url("Fonts/5321689/d5622205-b4e1-48e5-98a6-4ffe2ad76689.woff") format("woff");
+    }
+
+    
