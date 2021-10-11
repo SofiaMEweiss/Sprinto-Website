@@ -29,8 +29,10 @@ export const TeamW = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
-  grid-gap: 60px;
+  column-gap: 120px;
+  row-gap: 60px;
   padding: 0 0 60px 0;
+  /* border: red solid 1px; */
 
   /* @media screen and (max-width: 1000px) {
     grid-template-columns: 1fr 1fr;
@@ -43,22 +45,24 @@ export const TeamW = styled.div`
 `
 
 export const TeamCard = styled.div`
-  background: white;
+  /* background: white; */
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+
   /* align-items: center; */
   border-radius: 10px;
-  height: 480px;
-  padding: 30px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-  transition: all 0.2s ease-in-out;
+  height: 720px;
+  padding: 0px 0px 30px 0px;
+  /* box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); */
+  /* transition: all 0.2s ease-in-out; */
   margin: 15px;
+  /* border: red solid 1px; */
 
-  &:hover {
+  /* &:hover {
     transform: scale(1.02);
     transition: all 0.2s ease-in-out;
-  }
+  } */
 
   @media screen and (max-width: 768px) {
     height: auto;
@@ -66,17 +70,26 @@ export const TeamCard = styled.div`
 `
 
 export const TeamIcon = styled.img`
-  height: 160px;
-  width: 160px;
-  margin-bottom: 10px;
+  height: 240px;
+  width: 240px;
+  margin-bottom: 20px;
 `
 
 export const TeamH2 = styled.h2`
-  font-size: 1rem;
+  font-size: 1.7rem;
   margin-bottom: 10px;
 `
 export const TeamP = styled.p`
-  font-size: 1rem;
+  font-size: 1.3rem;
+  line-height: 1.8em;
+  margin-bottom: 8px;
+  /* text-align: center; */
+`
+
+export const TeamH3 = styled.h3`
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+  font-weight: 500;
   /* text-align: center; */
 `
 
@@ -87,4 +100,17 @@ export const TopLine = styled.p`
   text-transform: uppercase;
   color: #373e57;
   /* border: red solid 1px; */
+`
+
+export const Delimiter = styled.hr`
+  height: 4px;
+  width: 25%;
+  border: none;
+  background-color: #373e57;
+  margin-bottom: 24px;
+  /* background-color: ${({ newColor }) =>
+    newColor ? "#373e57" : "#94e7d3"}; */
+  /* &:nth-child(odd) {
+    background-color: #94e7d3;
+  } */
 `
