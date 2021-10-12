@@ -13,4 +13,5 @@ export const GlobalStyles = createGlobalStyle `
 /* body, html {
 	min-height: 100vh;
 } */
+
 `

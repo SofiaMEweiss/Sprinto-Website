@@ -33,6 +33,7 @@ export const Modal = ({
   const [phoneNumber, setPhoneNumber] = useState("")
   //   const [controlledPhoneNumber, setControlledPhoneNumber] = useState("")
   const [phoneNumberTouched, setPhoneNumberTouched] = useState(false)
+  const [formSent, setFormSent] = useState(false)
 
   if (typeof document !== "undefined") {
     if (showModal) {
@@ -80,6 +81,18 @@ export const Modal = ({
     return () => document.removeEventListener("keydown", keyPress)
   }, [keyPress])
 
+  const postPhoneNumber = event => {
+    event.preventDefault()
+    fetch(
+      "https://sprinto-se.azurewebsites.net/api/ContactForm?phoneNumber=" +
+        phoneNumber
+    )
+      .then(response => response.text())
+      .then(data => {
+        setFormSent(true)
+      })
+  }
+
   return (
     <>
       {showModal ? (
@@ -99,7 +112,7 @@ export const Modal = ({
                 <ModalHeading>{headline}</ModalHeading>
                 <ModalSubtitle>{description}</ModalSubtitle>
               </ModalTextContainer>
-              <ModalFormContainer>
+              <ModalFormContainer onSubmit={event => postPhoneNumber(event)}>
                 <ModalLabel>
                   <ModalInput
                     type="text"
@@ -120,6 +133,7 @@ export const Modal = ({
                 ) : null}
                 <ModalBtnContainer>
                   <Button
+                    type="submit"
                     fontBig={fontBig}
                     big={big}
                     primary={true}
