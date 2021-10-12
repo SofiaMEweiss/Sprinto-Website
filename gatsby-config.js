@@ -33,12 +33,12 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-google-fonts`,
+      resolve: 'gatsby-plugin-web-font-loader',
       options: {
-        fonts: [
-          `Century Gothic`
-        ],
-        display: 'swap'
+        custom: {
+          families: ['Century Gothic'],
+          urls: ["/fonts/fonts.css"]
+        }
       }
     }
     // this (optional) plugin enables Progressive Web App + Offline functionality
