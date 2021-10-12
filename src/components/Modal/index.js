@@ -29,23 +29,13 @@ export const Modal = ({
   buttonLabel,
   img,
   alt,
-  //   formSent,
-  //   setFormSent,
 }) => {
   const [phoneNumber, setPhoneNumber] = useState("")
-  //   const [controlledPhoneNumber, setControlledPhoneNumber] = useState("")
-  const [phoneNumberTouched, setPhoneNumberTouched] = useState(false)
+  const [inputFieldTouched, setInputFieldTouched] = useState(false)
   const [formSent, setFormSent] = useState(false)
 
-  if (typeof document !== "undefined") {
-    if (showModal) {
-      document.body.style.overflow = "hidden"
-    } else {
-      document.body.style.overflow = "auto"
-    }
-  }
-
-  const allowedPhoneNumberCharacters = "0123456789"
+  //Validering av inputfältet
+  const allowedPhoneNumberCharacters = "+0123456789"
   let phoneNumberIsValid = true
   let phoneNumberErrorMessage = ""
   if (phoneNumber === "") {
@@ -54,51 +44,36 @@ export const Modal = ({
   } else if (
     !phoneNumber
       .split("")
-      .every(char => allowedPhoneNumberCharacters.includes(char))
+      .every(character => allowedPhoneNumberCharacters.includes(character))
   ) {
     phoneNumberIsValid = false
     phoneNumberErrorMessage = "Vi skriver väl inte nummer med bokstäver :)"
   }
 
-  //För att kunna stänga modal vid klick på bakgrund och sen ändra state tillbaka till false
-  const modalRef = useRef()
-  const closeModal = e => {
-    if (modalRef.current === e.target) {
-      //   setShowModal(false)
-      //   setFormSent(false)
-      //   setPhoneNumber("")
-      //   setPhoneNumberTouched(prev => !prev)
-      mix()
-    }
-  }
-
-  const mix = () => {
+  //Återställa modal till ursprungsläge
+  const resetModal = () => {
     setShowModal(prev => !prev)
     setPhoneNumber("")
-    setPhoneNumberTouched(prev => !prev)
+    setInputFieldTouched(prev => !prev)
     setFormSent(false)
   }
 
-  //   const back = () => {
-  //     // setShowModal(prev => !prev)
-  //     // setPhoneNumber("")
-  //     // setPhoneNumberTouched(prev => !prev)
-  //     // setFormSent(false)
-  //     mix()
-  //   }
+  //För att kunna stänga modal vid klick på bakgrund och återställa modal till ursprungsläge
+  const modalRef = useRef()
+  const closeModal = e => {
+    if (modalRef.current === e.target) {
+      resetModal()
+    }
+  }
 
-  //För att kunna stänga modal genom att klicka esc (enbart om öppen) och sen ändra state tillbaka till false
+  //För att kunna stänga modal genom att klicka esc (enbart om öppen) och återställa modal till ursprungsläge
   const keyPress = useCallback(
     e => {
       if (e.key === "Escape" && showModal) {
-        // setShowModal(false)
-        // setFormSent(false)
-        // setPhoneNumber("")
-        // setPhoneNumberTouched(prev => !prev)
-        mix()
+        resetModal()
       }
     },
-    [setShowModal, showModal]
+    [setShowModal, showModal, resetModal]
   )
 
   useEffect(() => {
@@ -106,6 +81,7 @@ export const Modal = ({
     return () => document.removeEventListener("keydown", keyPress)
   }, [keyPress])
 
+  //Postar telefonnumret och ändrar state så skickat meddelandet visas.
   const postPhoneNumber = event => {
     event.preventDefault()
     fetch(
@@ -118,17 +94,22 @@ export const Modal = ({
       })
   }
 
+  //För att bakgrunden ej ska kunna scrollas
+  if (typeof document !== "undefined") {
+    if (showModal) {
+      document.body.style.overflow = "hidden"
+    } else {
+      document.body.style.overflow = "auto"
+    }
+  }
+
   return (
     <>
       {showModal ? (
         <Background ref={modalRef} onClick={closeModal} id={id}>
           <ModalWrapper showModal={showModal}>
             <ModalTopContainer>
-              <CloseModalIcon
-                size={32}
-                // onClick={() => setShowModal(prev => !prev)}
-                onClick={mix}
-              />
+              <CloseModalIcon size={32} onClick={resetModal} />
             </ModalTopContainer>
             <ModalLeftContainer>
               <ModalImg src={img} alt={alt} />
@@ -150,23 +131,23 @@ export const Modal = ({
                         type="text"
                         maxLength="13"
                         minLength="8"
-                        onBlur={() => setPhoneNumberTouched(true)}
+                        onBlur={() => setInputFieldTouched(true)}
                         onChange={event => {
-                          console.log("Controlled change", event.target.value)
                           setPhoneNumber(event.target.value)
-                          // setControlledPhoneNumber(event.target.value)
                         }}
                         value={phoneNumber}
                         valid={phoneNumberIsValid}
-                        touched={phoneNumberTouched}
+                        touched={inputFieldTouched}
                         placeholder="Skriv ditt telefonnummer"
                       />
                     </ModalLabel>
-                    {phoneNumberTouched ? (
+                    {inputFieldTouched ? (
                       <HiddenMessage>{phoneNumberErrorMessage}</HiddenMessage>
                     ) : null}
                     <ModalBtnContainer>
                       <Button
+                        //Btn inaktiverad om phoneNumberIsValid är false
+                        disabled={!phoneNumberIsValid}
                         type="submit"
                         fontBig={fontBig}
                         big={big}
