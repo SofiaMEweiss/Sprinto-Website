@@ -116,6 +116,7 @@ export const Modal = ({
                 <ModalLabel>
                   <ModalInput
                     type="text"
+                    maxLength="13"
                     onBlur={() => setPhoneNumberTouched(true)}
                     onChange={event => {
                       console.log("Controlled change", event.target.value)
