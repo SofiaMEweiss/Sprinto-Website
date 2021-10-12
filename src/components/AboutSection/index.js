@@ -36,10 +36,12 @@ const InfoSection = ({
 }) => {
   const allMessages = ["Härliga", "Roliga", "Trevliga"]
   const [showModal, setShowModal] = useState(false)
+  //   const [formSent, setFormSent] = useState(false)
 
   //Ändrar state från förgående, för att toggla modalen
   const openModal = () => {
     setShowModal(prev => !prev)
+    // setFormSent(false)
   }
 
   return (
@@ -83,6 +85,8 @@ const InfoSection = ({
                   <Modal
                     showModal={showModal}
                     setShowModal={setShowModal}
+                    // formSent={formSent}
+                    // setFormSent={setFormSent}
                     {...modalObj}
                   />
                 </BtnContainer>{" "}

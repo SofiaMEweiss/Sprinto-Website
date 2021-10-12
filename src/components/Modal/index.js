@@ -29,6 +29,8 @@ export const Modal = ({
   buttonLabel,
   img,
   alt,
+  //   formSent,
+  //   setFormSent,
 }) => {
   const [phoneNumber, setPhoneNumber] = useState("")
   //   const [controlledPhoneNumber, setControlledPhoneNumber] = useState("")
@@ -62,15 +64,38 @@ export const Modal = ({
   const modalRef = useRef()
   const closeModal = e => {
     if (modalRef.current === e.target) {
-      setShowModal(false)
+      //   setShowModal(false)
+      //   setFormSent(false)
+      //   setPhoneNumber("")
+      //   setPhoneNumberTouched(prev => !prev)
+      mix()
     }
   }
+
+  const mix = () => {
+    setShowModal(prev => !prev)
+    setPhoneNumber("")
+    setPhoneNumberTouched(prev => !prev)
+    setFormSent(false)
+  }
+
+  //   const back = () => {
+  //     // setShowModal(prev => !prev)
+  //     // setPhoneNumber("")
+  //     // setPhoneNumberTouched(prev => !prev)
+  //     // setFormSent(false)
+  //     mix()
+  //   }
 
   //För att kunna stänga modal genom att klicka esc (enbart om öppen) och sen ändra state tillbaka till false
   const keyPress = useCallback(
     e => {
       if (e.key === "Escape" && showModal) {
-        setShowModal(false)
+        // setShowModal(false)
+        // setFormSent(false)
+        // setPhoneNumber("")
+        // setPhoneNumberTouched(prev => !prev)
+        mix()
       }
     },
     [setShowModal, showModal]
@@ -101,49 +126,59 @@ export const Modal = ({
             <ModalTopContainer>
               <CloseModalIcon
                 size={32}
-                onClick={() => setShowModal(prev => !prev)}
+                // onClick={() => setShowModal(prev => !prev)}
+                onClick={mix}
               />
             </ModalTopContainer>
             <ModalLeftContainer>
               <ModalImg src={img} alt={alt} />
             </ModalLeftContainer>
             <ModalRightContainer>
-              <ModalTextContainer>
-                <ModalHeading>{headline}</ModalHeading>
-                <ModalSubtitle>{description}</ModalSubtitle>
-              </ModalTextContainer>
-              <ModalFormContainer onSubmit={event => postPhoneNumber(event)}>
-                <ModalLabel>
-                  <ModalInput
-                    type="text"
-                    maxLength="13"
-                    onBlur={() => setPhoneNumberTouched(true)}
-                    onChange={event => {
-                      console.log("Controlled change", event.target.value)
-                      setPhoneNumber(event.target.value)
-                      // setControlledPhoneNumber(event.target.value)
-                    }}
-                    value={phoneNumber}
-                    valid={phoneNumberIsValid}
-                    touched={phoneNumberTouched}
-                    placeholder="Skriv ditt telefonnummer"
-                  />
-                </ModalLabel>
-                {phoneNumberTouched ? (
-                  <HiddenMessage>{phoneNumberErrorMessage}</HiddenMessage>
-                ) : null}
-                <ModalBtnContainer>
-                  <Button
-                    type="submit"
-                    fontBig={fontBig}
-                    big={big}
-                    primary={true}
-                    dark={true}
+              {formSent ? (
+                <p>Skickat</p>
+              ) : (
+                <>
+                  <ModalTextContainer>
+                    <ModalHeading>{headline}</ModalHeading>
+                    <ModalSubtitle>{description}</ModalSubtitle>
+                  </ModalTextContainer>
+                  <ModalFormContainer
+                    onSubmit={event => postPhoneNumber(event)}
                   >
-                    {buttonLabel}
-                  </Button>
-                </ModalBtnContainer>
-              </ModalFormContainer>
+                    <ModalLabel>
+                      <ModalInput
+                        type="text"
+                        maxLength="13"
+                        minLength="8"
+                        onBlur={() => setPhoneNumberTouched(true)}
+                        onChange={event => {
+                          console.log("Controlled change", event.target.value)
+                          setPhoneNumber(event.target.value)
+                          // setControlledPhoneNumber(event.target.value)
+                        }}
+                        value={phoneNumber}
+                        valid={phoneNumberIsValid}
+                        touched={phoneNumberTouched}
+                        placeholder="Skriv ditt telefonnummer"
+                      />
+                    </ModalLabel>
+                    {phoneNumberTouched ? (
+                      <HiddenMessage>{phoneNumberErrorMessage}</HiddenMessage>
+                    ) : null}
+                    <ModalBtnContainer>
+                      <Button
+                        type="submit"
+                        fontBig={fontBig}
+                        big={big}
+                        primary={true}
+                        dark={true}
+                      >
+                        {buttonLabel}
+                      </Button>
+                    </ModalBtnContainer>
+                  </ModalFormContainer>
+                </>
+              )}
             </ModalRightContainer>
           </ModalWrapper>
         </Background>
