@@ -11,6 +11,7 @@ export const NavWrapper = styled.nav`
   height: 80px;
   margin-top: -80px;
   background: ${({ scrollNav }) => (scrollNav ? "#fff" : "transparent")};
+  opacity: ${({ scrollNav }) => (scrollNav ? "0.90" : "1")};
 
   @media screen and (max-width: 960px) {
     transition: 0.8s all ease;
