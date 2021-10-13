@@ -138,7 +138,7 @@ export const ModalInput = styled.input`
   }
 `
 
-export const HiddenMessage = styled.p`
+export const ValidationMessage = styled.p`
   padding: 0.5em 0 0 0;
   text-align: center;
 `
@@ -147,4 +147,11 @@ export const ModalBtnContainer = styled.div`
   display: flex;
   justify-content: center;
   padding: 1.5em 0 3em 0;
+`
+
+export const AfterSubmitText = styled.p`
+  justify-content: center;
+  display: flex;
+  font-size: 1.5rem;
+  font-weight: bold;
 `

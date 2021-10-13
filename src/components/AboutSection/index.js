@@ -26,6 +26,8 @@ const InfoSection = ({
   topLine,
   headline,
   description,
+  description2,
+  description3,
   buttonLabel,
   img,
   alt,
@@ -52,7 +54,14 @@ const InfoSection = ({
             <ContentContainer>
               <TextContainer>
                 <TopLine> {topLine} </TopLine> <Heading> {headline} </Heading>{" "}
-                <Subtitle> {description}</Subtitle>{" "}
+                <Subtitle>
+                  {" "}
+                  {description} {<br />}
+                  {<br />}
+                  {description2} {<br />}
+                  {<br />}
+                  {description3}
+                </Subtitle>{" "}
                 <Contact>
                   Vi söker alltid efter{" "}
                   <Typewriter words={allMessages}></Typewriter>{" "}

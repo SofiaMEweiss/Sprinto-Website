@@ -14,8 +14,9 @@ import {
   ModalFormContainer,
   ModalLabel,
   ModalInput,
-  HiddenMessage,
+  ValidationMessage,
   ModalBtnContainer,
+  AfterSubmitText,
 } from "./ModalElements"
 
 export const Modal = ({
@@ -29,6 +30,7 @@ export const Modal = ({
   buttonLabel,
   img,
   alt,
+  sentMessage,
 }) => {
   const [phoneNumber, setPhoneNumber] = useState("")
   const [inputFieldTouched, setInputFieldTouched] = useState(false)
@@ -116,7 +118,7 @@ export const Modal = ({
             </ModalLeftContainer>
             <ModalRightContainer>
               {formSent ? (
-                <p>Skickat</p>
+                <AfterSubmitText>{sentMessage}</AfterSubmitText>
               ) : (
                 <>
                   <ModalTextContainer>
@@ -142,7 +144,9 @@ export const Modal = ({
                       />
                     </ModalLabel>
                     {inputFieldTouched ? (
-                      <HiddenMessage>{phoneNumberErrorMessage}</HiddenMessage>
+                      <ValidationMessage>
+                        {phoneNumberErrorMessage}
+                      </ValidationMessage>
                     ) : null}
                     <ModalBtnContainer>
                       <Button
