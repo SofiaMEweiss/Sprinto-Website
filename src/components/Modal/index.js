@@ -52,13 +52,13 @@ export const Modal = ({
     phoneNumberErrorMessage = "Vi skriver väl inte nummer med bokstäver :)"
   }
 
-  //Återställa modal till ursprungsläge
-  const resetModal = () => {
+  //Återställa modal till ursprungsläge, callback för att funktionen inte ska nyskapas hela tiden utan bara när den ändras/uppdateras
+  const resetModal = useCallback(() => {
     setShowModal(prev => !prev)
     setPhoneNumber("")
-    setInputFieldTouched(prev => !prev)
+    setInputFieldTouched(false)
     setFormSent(false)
-  }
+  }, [setShowModal])
 
   //För att kunna stänga modal vid klick på bakgrund och återställa modal till ursprungsläge
   const modalRef = useRef()
@@ -75,7 +75,7 @@ export const Modal = ({
         resetModal()
       }
     },
-    [setShowModal, showModal, resetModal]
+    [showModal, resetModal]
   )
 
   useEffect(() => {
