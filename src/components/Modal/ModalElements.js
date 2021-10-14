@@ -104,7 +104,7 @@ export const ModalHeading = styled.h2`
 export const ModalSubtitle = styled.p`
   display: flex;
   font-size: 1rem;
-  line-height: 1.5rem;
+  line-height: 1.3rem;
 `
 export const ModalFormContainer = styled.form``
 export const ModalLabel = styled.label`
@@ -149,9 +149,23 @@ export const ModalBtnContainer = styled.div`
   padding: 1.5em 0 3em 0;
 `
 
-export const AfterSubmitText = styled.p`
-  justify-content: center;
+export const AfterSubmitContainer = styled.div`
   display: flex;
-  font-size: 1.5rem;
+  flex-direction: column;
+  align-items: center;
+`
+
+export const AfterSubmitHeading = styled.h2`
+  /* justify-content: center;
+  display: flex; */
+  font-size: 1.3rem;
   font-weight: bold;
+`
+
+export const AfterSubmitText = styled.p`
+  /* justify-content: center;
+  display: flex; */
+  font-size: 1.1rem;
+  line-height: 1.8em;
+  /* font-weight: bold; */
 `

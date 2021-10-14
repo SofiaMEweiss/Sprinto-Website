@@ -5,5 +5,6 @@ export const modalObj = {
     buttonLabel: "Kontakta mig",
     img: require("../../images/modal-img.svg").default,
     alt: "Person bredvid en puzzeltelefon",
-    sentMessage: "Tack! Vi hör av oss under dagen!",
+    sentMessageHeading: "Tack!",
+    sentMessage: "Vi hör av oss under dagen!",
 }

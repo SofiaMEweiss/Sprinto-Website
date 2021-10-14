@@ -16,7 +16,9 @@ import {
   ModalInput,
   ValidationMessage,
   ModalBtnContainer,
+  AfterSubmitContainer,
   AfterSubmitText,
+  AfterSubmitHeading,
 } from "./ModalElements"
 
 export const Modal = ({
@@ -30,6 +32,7 @@ export const Modal = ({
   buttonLabel,
   img,
   alt,
+  sentMessageHeading,
   sentMessage,
 }) => {
   const [phoneNumber, setPhoneNumber] = useState("")
@@ -118,7 +121,10 @@ export const Modal = ({
             </ModalLeftContainer>
             <ModalRightContainer>
               {formSent ? (
-                <AfterSubmitText>{sentMessage}</AfterSubmitText>
+                <AfterSubmitContainer>
+                  <AfterSubmitHeading>{sentMessageHeading}</AfterSubmitHeading>
+                  <AfterSubmitText>{sentMessage}</AfterSubmitText>
+                </AfterSubmitContainer>
               ) : (
                 <>
                   <ModalTextContainer>
