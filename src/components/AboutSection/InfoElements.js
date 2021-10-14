@@ -8,7 +8,7 @@ export const AboutContainer = styled.div`
   max-width: 1400px;
   z-index: 1;
   margin: auto;
-  padding: 0 24px;
+  /* padding: 0 24px; */
 
   @media screen and (max-width: 768px) {
     padding: 0 0 60px 0;
@@ -34,7 +34,7 @@ export const ContentContainer = styled.div`
 
 export const TextContainer = styled.div`
   /* max-width: 540px; */
-  padding: 60px 15px;
+  padding: 60px 24px;
 `
 
 export const TopLine = styled.p`
@@ -47,7 +47,7 @@ export const TopLine = styled.p`
 
 export const Heading = styled.h1`
   margin-bottom: 24px;
-  font-size: 3rem;
+  font-size: 2.8rem;
   line-height: 1.2;
   font-weight: bold;
   color: #000;
@@ -60,7 +60,7 @@ export const Heading = styled.h1`
 
 export const Subtitle = styled.p`
   margin-bottom: 35px;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   line-height: 1.5;
   color: #000;
   /* border: red solid 1px; */
@@ -72,7 +72,7 @@ export const Subtitle = styled.p`
 
 export const Contact = styled.p`
   margin-bottom: 15px;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   line-height: 1.5;
   color: #000;
   font-weight: bold;
@@ -85,8 +85,8 @@ export const Contact = styled.p`
 `
 
 export const Cursor = styled.span`
-  margin-bottom: 15px;
-  font-size: 1.3rem;
+  margin-bottom: 24px;
+  font-size: 1.1rem;
   line-height: 32px;
   color: #000;
   font-weight: bold;

@@ -1,6 +1,6 @@
 export const employees = [{
         id: "1",
-        img: require("../../images/profile.svg").default,
+        img: require("../../images/jonatan.png").default,
         fullName: "Jonatan Hallenberg",
         title: "VD och utvecklare",
         description: "Jonatan är hjärnan bakom allt. I alla fall det som har med Sprinto att göra. Han är en sann fullstack-utvecklare med erfarenhet av att jobba med alltifrån startups till stora globala företag. Jonatan har ett förflutet som kapellmästare och besitter en unik förmåga att komma på idéer och kreativa lösningar. Han äter glass varje kväll men lyckas på något märkligt vis hålla sig i form ändå.",
@@ -8,9 +8,9 @@ export const employees = [{
     {
         id: "2",
         img: require("../../images/profile.svg").default,
-        fullName: "Fredrik Lindroth",
+        fullName: "Jens Palmqvist",
         title: "Utvecklare",
-        description: "Fredrik gillar när saker och ting är invecklade. Han är fullstack-utvecklare med mycket erfarenhet av uppdrag inom områdena ekonomi och finans. Fredrik har stort tålamod och delar gärna med sig av sin kunskap till andra. Fredrik är en utpräglad nattuggla och en hejare på att köra truck.",
+        description: 'Jens lever efter devisen "Det måste finnas ett bättre sätt att göra det här på". Han är en fullstack-utvecklare som lutar kraftigt åt backend-hållet och älskar när något går sönder och måste fixas. Jens har en bakgrund som klassisk sångare och har från det med sig hur otroligt viktigt det är med samarbete och att lyfta varandra på arbetsplatsen. Han är inkapabel att köpa mindre än 500 gram lösgodis i taget.',
     },
     {
         id: "3",
@@ -29,9 +29,9 @@ export const employees = [{
     {
         id: "5",
         img: require("../../images/profile.svg").default,
-        fullName: "Jens Palmqvist",
+        fullName: "Fredrik Lindroth",
         title: "Utvecklare",
-        description: 'Jens lever efter devisen "Det måste finnas ett bättre sätt att göra det här på". Han är en fullstack-utvecklare som lutar kraftigt åt backend-hållet och älskar när något går sönder och måste fixas. Jens har en bakgrund som klassisk sångare och har från det med sig hur otroligt viktigt det är med samarbete och att lyfta varandra på arbetsplatsen. Han är inkapabel att köpa mindre än 500 gram lösgodis i taget.',
+        description: "Fredrik gillar när saker och ting är invecklade. Han är fullstack-utvecklare med mycket erfarenhet av uppdrag inom områdena ekonomi och finans. Fredrik har stort tålamod och delar gärna med sig av sin kunskap till andra. Fredrik är en utpräglad nattuggla och en hejare på att köra truck.",
     },
     {
         id: "6",

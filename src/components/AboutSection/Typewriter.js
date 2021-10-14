@@ -3,7 +3,7 @@ import styled from "styled-components"
 
 const StyledTypewriter = styled.span`
   margin: 0 0 15px 4px;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   line-height: 32px;
   color: #000;
   font-weight: bold;

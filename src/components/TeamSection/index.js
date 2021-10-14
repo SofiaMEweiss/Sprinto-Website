@@ -2,16 +2,15 @@ import React from "react"
 // import { useState, useEffect } from "react"
 import {
   TeamWrapper,
-  TeamW,
-  TeamCard,
-  TeamH2,
-  TeamP,
-  Delimiter,
-  TeamIcon,
-  TopLine,
   TeamContainer,
-  TextContainer,
+  TopLine,
+  TeamCardContainer,
+  TeamCard,
+  TeamImg,
+  TeamH2,
   TeamH3,
+  Delimiter,
+  TeamP,
 } from "./TeamElements"
 import { employees } from "../TeamSection/Data"
 
@@ -33,13 +32,11 @@ const TeamSection = () => {
   return (
     <TeamWrapper id="team">
       <TeamContainer>
-        <TextContainer>
-          <TopLine>Team sprinto </TopLine>
-        </TextContainer>
-        <TeamW>
+        <TopLine>Team sprinto </TopLine>
+        <TeamCardContainer>
           {employees.map(employee => (
             <TeamCard key={employee.id}>
-              <TeamIcon src={employee.img} />{" "}
+              <TeamImg src={employee.img} />{" "}
               <TeamH2> {employee.fullName} </TeamH2>
               <TeamH3> {employee.title} </TeamH3>
               {/* <Delimiter newColor={newColor}></Delimiter> */}
@@ -50,7 +47,7 @@ const TeamSection = () => {
               <TeamP> {employee.description} </TeamP>
             </TeamCard>
           ))}
-        </TeamW>{" "}
+        </TeamCardContainer>{" "}
       </TeamContainer>
     </TeamWrapper>
   )
