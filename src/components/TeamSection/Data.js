@@ -1,13 +1,13 @@
 export const employees = [{
         id: "1",
-        img: require("../../images/jonatan.png").default,
+        img: require("../../images/jonatan-avatar.png").default,
         fullName: "Jonatan Hallenberg",
         title: "VD och utvecklare",
         description: "Jonatan är hjärnan bakom allt. I alla fall det som har med Sprinto att göra. Han är en sann fullstack-utvecklare med erfarenhet av att jobba med alltifrån startups till stora globala företag. Jonatan har ett förflutet som kapellmästare och besitter en unik förmåga att komma på idéer och kreativa lösningar. Han äter glass varje kväll men lyckas på något märkligt vis hålla sig i form ändå.",
     },
     {
         id: "2",
-        img: require("../../images/profile.svg").default,
+        img: require("../../images/jens-avatar.png").default,
         fullName: "Jens Palmqvist",
         title: "Utvecklare",
         description: 'Jens lever efter devisen "Det måste finnas ett bättre sätt att göra det här på". Han är en fullstack-utvecklare som lutar kraftigt åt backend-hållet och älskar när något går sönder och måste fixas. Jens har en bakgrund som klassisk sångare och har från det med sig hur otroligt viktigt det är med samarbete och att lyfta varandra på arbetsplatsen. Han är inkapabel att köpa mindre än 500 gram lösgodis i taget.',
@@ -35,7 +35,7 @@ export const employees = [{
     },
     {
         id: "6",
-        img: require("../../images/profile.svg").default,
+        img: require("../../images/henning-avatar.png").default,
         fullName: "Henning Bergström",
         title: "Utvecklare",
         description: "Henning gillar att gräva. Han är driftig och ger sig inte förrän har har hittat orsaken till ett problem. Henning har supermycket erfarenhet av backendutveckling på mjukvarubolag och är nu på jakt efter den perfekta användarupplevelsen i frontendens underbara värld. Han gillar hårdrock och missar aldrig en kopp kaffe.",

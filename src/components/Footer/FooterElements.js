@@ -1,49 +1,53 @@
 import styled from "styled-components"
-import { Link } from "gatsby"
 
 export const FooterWrapper = styled.footer`
-  padding: 48px 0 48px 0;
+  padding: 3em 0 3em 0;
   background-color: #373e57;
   color: #eeeae7;
 
   @media screen and (max-width: 820px) {
-    padding-top: 32px;
+    padding: 2em 0 2em 0;
   }
 `
 
-export const FooterContainer = styled.div`
+export const AddressContent = styled.address`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 0 1.5em 0;
+  font-style: normal;
+  padding-bottom: 1.5em;
 `
 
-export const FooterH3 = styled.h3`
-  padding: 0.2em;
+export const FooterHeading = styled.h3`
+  line-height: 1.6em;
   font-size: 1.5rem;
   font-weight: bold;
+  text-transform: uppercase;
 `
 
-export const FooterP = styled.p`
+export const Address = styled.p`
   text-align: center;
   font-size: 1.1rem;
-  line-height: 1.8rem;
+  line-height: 1.6em;
+`
+
+export const ContactLink = styled.a`
+  text-align: center;
+  font-size: 1.1rem;
+  line-height: 1.6em;
+  text-decoration: none;
+  color: #eeeae7;
 `
 
 export const SocialIconLink = styled.a`
   display: flex;
-  align-items: center;
-  padding: 0.2em;
+  justify-content: center;
+  padding-bottom: 1.5em;
   color: #94e7d3;
 `
 
 export const WebsiteRights = styled.p`
   display: flex;
   justify-content: center;
-  padding: 32px 0 0 0;
-  color: #fff;
-
-  @media screen and (max-width: 820px) {
-    padding-top: 32px;
-  }
+  padding: 2em 0 0 0;
 `

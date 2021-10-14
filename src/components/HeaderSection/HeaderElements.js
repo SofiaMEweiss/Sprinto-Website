@@ -50,7 +50,7 @@ export const HeaderContentContainer = styled.div`
 `
 
 export const HeaderH1 = styled.h1`
-  color: #fff;
+  color: #eeeae7;
   text-align: center;
   font-size: 4rem;
 

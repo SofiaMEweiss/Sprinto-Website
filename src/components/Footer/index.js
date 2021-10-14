@@ -2,9 +2,10 @@ import React from "react"
 import { FaLinkedin } from "react-icons/fa"
 import {
   FooterWrapper,
-  FooterContainer,
-  FooterH3,
-  FooterP,
+  FooterHeading,
+  AddressContent,
+  Address,
+  ContactLink,
   SocialIconLink,
   WebsiteRights,
 } from "./FooterElements"
@@ -12,34 +13,31 @@ import {
 const Footer = () => {
   return (
     <FooterWrapper>
-      <FooterContainer>
-        <FooterH3> KOM FÖRBI </FooterH3>
-        <FooterP>
+      <AddressContent>
+        <FooterHeading> Kom förbi </FooterHeading>
+        <Address>
           Magnus Ladulåsgatan 1 {<br />}
           118 65 Stockholm
-        </FooterP>{" "}
-      </FooterContainer>{" "}
-      <FooterContainer>
-        <FooterH3> HÖR AV DIG </FooterH3>{" "}
-        <FooterP>
-          {" "}
-          kontakt@sprinto.se {<br />}
-          072 - 300 36 42{" "}
-        </FooterP>{" "}
-      </FooterContainer>{" "}
-      <FooterContainer>
-        <SocialIconLink
-          href="//www.linkedin.com/company/sprinto/about/"
-          target="_blank"
-          aria-label="Linkedin"
-        >
-          <FaLinkedin size={35} />{" "}
-        </SocialIconLink>{" "}
-      </FooterContainer>{" "}
+        </Address>
+      </AddressContent>
+      <AddressContent>
+        <FooterHeading> Hör av dig </FooterHeading>
+        <ContactLink href="mailto:kontakt@sprinto.se">
+          kontakt@sprinto.se
+        </ContactLink>
+        <ContactLink href="tel: +4672300 36 42">072 - 300 36 42</ContactLink>
+      </AddressContent>
+      <SocialIconLink
+        href="//www.linkedin.com/company/sprinto/about/"
+        target="_blank"
+        aria-label="Linkedin"
+      >
+        <FaLinkedin size={36} />
+      </SocialIconLink>
       <WebsiteRights>
         Sprinto© {new Date().getFullYear()}
-        All right reserved.{" "}
-      </WebsiteRights>{" "}
+        All right reserved.
+      </WebsiteRights>
     </FooterWrapper>
   )
 }
