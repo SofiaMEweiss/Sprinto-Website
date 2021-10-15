@@ -11,7 +11,7 @@ function Sidebar({ isOpen, toggle }) {
   return (
     <SidebarWrapper isOpen={isOpen} onClick={toggle}>
       <IconContainer onClick={toggle}>
-        <CloseIcon size={28} />
+        <CloseIcon size={32} />
       </IconContainer>
       <SidebarMenuContainer>
         <SidebarLink to="about" onClick={toggle}>

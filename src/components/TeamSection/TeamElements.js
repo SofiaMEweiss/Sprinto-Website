@@ -37,25 +37,10 @@ export const TeamCard = styled.div`
   height: auto;
   padding: 0px 0px 30px 0px;
   margin: 15px;
-  /* border: red solid 1px; */
-
-  /* @media screen and (max-width: 1270px) {
-    height: 700px;
-    height: auto;
-  }
-
-  @media screen and (max-width: 1000px) {
-    height: 800px;
-    height: auto;
-  }
-
-  @media screen and (max-width: 800px) {
-    height: 820px;
-    height: auto;
-  } */
 
   @media screen and (max-width: 768px) {
     align-items: center;
+    margin: 0px;
   }
 `
 
@@ -100,7 +85,6 @@ export const TopLine = styled.p`
 
 export const Delimiter = styled.hr`
   height: 4px;
-  /* width: 25%; */
   width: 10em;
   border: none;
   background-color: #373e57;
@@ -110,25 +94,5 @@ export const Delimiter = styled.hr`
     newColor ? "#373e57" : "#94e7d3"}; */
   /* &:nth-child(odd) {
     background-color: #94e7d3;
-  } */
-
-  /* @media screen and (max-width: 1300px) {
-    width: 35%;
-  }
-
-  @media screen and (max-width: 1300px) {
-    width: 40%;
-  }
-
-  @media screen and (max-width: 1050px) {
-    width: 45%;
-  }
-
-  @media screen and (max-width: 950px) {
-    width: 55%;
-  } */
-
-  /* @media screen and (max-width: 768px) {
-    width: 10em;
   } */
 `

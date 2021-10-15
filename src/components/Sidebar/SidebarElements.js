@@ -1,35 +1,29 @@
 import styled from "styled-components"
-import { Link as LinkS } from "react-scroll"
+import { Link as LinkScroll } from "react-scroll"
 import { FaTimes } from "react-icons/fa"
 
 export const SidebarWrapper = styled.aside`
-  display: grid;
+  display: flex;
   align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: ${({ isOpen }) => (isOpen ? "0" : "-100%")};
+  z-index: 999;
   width: 100%;
   height: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  top: ${({ isOpen }) => (isOpen ? "0" : "-100%")};
-  //För att den ska lägga sig ovanpå alltihopa.Så vart man än klickar så ska det vara där.
-  z-index: 999;
   background: #373e57;
-  transition: 0ms.3s ease-in-out;
   opacity: ${({ isOpen }) => (isOpen ? "100%" : "0")};
+  transition: 0.3s ease-in-out;
+  color: #eeeae7;
 `
 export const IconContainer = styled.div`
   position: absolute;
-  top: 1.2rem;
-  right: 1.5rem;
-  background: transparent;
-  outline: none;
-  font-size: 2rem;
+  top: 1.5em;
+  right: 1.5em;
   cursor: pointer;
 `
 
-export const CloseIcon = styled(FaTimes)`
-  color: #eeeae7;
-`
+export const CloseIcon = styled(FaTimes)``
 
 export const SidebarMenuContainer = styled.ul`
   display: grid;
@@ -42,20 +36,20 @@ export const SidebarMenuContainer = styled.ul`
   } ;
 `
 
-export const SidebarLink = styled(LinkS)`
+export const SidebarLink = styled(LinkScroll)`
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #eeeae7;
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   font-weight: bold;
-  text-transform: uppercase;
   text-decoration: none;
   list-style: none;
+  text-transform: uppercase;
   cursor: pointer;
 
   &:hover {
     color: #fff;
+    border-bottom: 3px solid #f7a58f;
     transition: 0.2s ease-in-out;
   }
 `

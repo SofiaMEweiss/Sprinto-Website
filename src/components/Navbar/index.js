@@ -35,16 +35,17 @@ const Navbar = ({ toggle }) => {
   }
   return (
     <>
-      {/* För att alla ikoner ska få en viss färg */}
+      {" "}
+      {/* För att alla ikoner ska få en viss färg */}{" "}
       <IconContext.Provider value={{ color: "#000" }}>
         <NavWrapper scrollNav={scrollNav}>
           <NavbarContainer>
             <NavLogoContainer to="/" onClick={toggleHome}>
-              <LogoIcon src={Logo} />
-            </NavLogoContainer>
+              <LogoIcon src={Logo} />{" "}
+            </NavLogoContainer>{" "}
             <MobileIcon onClick={toggle}>
-              <FaBars size={28} />
-            </MobileIcon>
+              <FaBars size={28} />{" "}
+            </MobileIcon>{" "}
             <NavMenu>
               <NavItem>
                 <NavLinks
@@ -55,9 +56,9 @@ const Navbar = ({ toggle }) => {
                   exact="true"
                   offset={-80}
                 >
-                  Om oss
-                </NavLinks>
-              </NavItem>
+                  Om oss{" "}
+                </NavLinks>{" "}
+              </NavItem>{" "}
               <NavItem>
                 <NavLinks
                   to="team"
@@ -67,13 +68,13 @@ const Navbar = ({ toggle }) => {
                   exact="true"
                   offset={-80}
                 >
-                  Teamet
-                </NavLinks>
-              </NavItem>
-            </NavMenu>
-          </NavbarContainer>
-        </NavWrapper>
-      </IconContext.Provider>
+                  Teamet{" "}
+                </NavLinks>{" "}
+              </NavItem>{" "}
+            </NavMenu>{" "}
+          </NavbarContainer>{" "}
+        </NavWrapper>{" "}
+      </IconContext.Provider>{" "}
     </>
   )
 }
