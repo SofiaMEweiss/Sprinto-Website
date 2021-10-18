@@ -1,28 +1,29 @@
 import React, { useState, useEffect } from "react"
-import { FaBars } from "react-icons/fa"
+// import { FaBars } from "react-icons/fa"
 import { IconContext } from "react-icons/lib"
 import { animateScroll as scroll } from "react-scroll"
 import Logo from "../../images/logo.svg"
 import {
   NavWrapper,
   NavbarContainer,
-  NavLogoContainer,
+  NavLogoLink,
   LogoIcon,
-  MobileIcon,
+  MobileIconContainer,
+  MobileMenuIcon,
   NavMenu,
   NavItem,
   NavLinks,
 } from "./NavbarElements"
 
 const Navbar = ({ toggle }) => {
-  const [scrollNav, setScrollNav] = useState(false)
+  const [isNavScrolled, setIsNavScrolled] = useState(false)
 
-  //Om fönstret på Y led blir större eller lika med 80px så uppdateras state på scrollNav.
+  //Om fönstret på Y led blir större eller lika med 80px så uppdateras state på isNavScrolled.
   const changeNav = () => {
     if (window.scrollY >= 80) {
-      setScrollNav(true)
+      setIsNavScrolled(true)
     } else {
-      setScrollNav(false)
+      setIsNavScrolled(false)
     }
   }
 
@@ -30,22 +31,22 @@ const Navbar = ({ toggle }) => {
     window.addEventListener("scroll", changeNav)
   }, [])
 
-  const toggleHome = () => {
+  //När man klickar på loggan så kommer man högst upp på sidan.
+  const scrollToTop = () => {
     scroll.scrollToTop()
   }
   return (
     <>
-      {" "}
-      {/* För att alla ikoner ska få en viss färg */}{" "}
+      {/* För att alla ikoner ska få en viss färg */}
       <IconContext.Provider value={{ color: "#000" }}>
-        <NavWrapper scrollNav={scrollNav}>
+        <NavWrapper isNavScrolled={isNavScrolled}>
           <NavbarContainer>
-            <NavLogoContainer to="/" onClick={toggleHome}>
-              <LogoIcon src={Logo} />{" "}
-            </NavLogoContainer>{" "}
-            <MobileIcon onClick={toggle}>
-              <FaBars size={28} />{" "}
-            </MobileIcon>{" "}
+            <NavLogoLink to="/" onClick={scrollToTop}>
+              <LogoIcon src={Logo} />
+            </NavLogoLink>
+            <MobileIconContainer onClick={toggle}>
+              <MobileMenuIcon size={28} />
+            </MobileIconContainer>
             <NavMenu>
               <NavItem>
                 <NavLinks
@@ -56,9 +57,9 @@ const Navbar = ({ toggle }) => {
                   exact="true"
                   offset={-80}
                 >
-                  Om oss{" "}
-                </NavLinks>{" "}
-              </NavItem>{" "}
+                  Om oss
+                </NavLinks>
+              </NavItem>
               <NavItem>
                 <NavLinks
                   to="team"
@@ -68,13 +69,13 @@ const Navbar = ({ toggle }) => {
                   exact="true"
                   offset={-80}
                 >
-                  Teamet{" "}
-                </NavLinks>{" "}
-              </NavItem>{" "}
-            </NavMenu>{" "}
-          </NavbarContainer>{" "}
-        </NavWrapper>{" "}
-      </IconContext.Provider>{" "}
+                  Teamet
+                </NavLinks>
+              </NavItem>
+            </NavMenu>
+          </NavbarContainer>
+        </NavWrapper>
+      </IconContext.Provider>
     </>
   )
 }
