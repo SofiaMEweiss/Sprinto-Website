@@ -24,7 +24,7 @@ const IndexPage = () => {
     //   <Layout>
     <div>
       <GlobalStyles />
-      <Seo title="Home" />
+      <Seo title="Sprinto" />
       <Sidebar isOpen={isOpen} toggle={toggle} />
       <Navbar toggle={toggle} />
       <HeaderSection />

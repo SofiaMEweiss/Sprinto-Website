@@ -6,12 +6,11 @@ export const AboutWrapper = styled.section`
 
 export const AboutContainer = styled.div`
   max-width: 1400px;
-  z-index: 1;
+  padding: 4rem 0px;
   margin: auto;
-  /* padding: 0 24px; */
 
   @media screen and (max-width: 768px) {
-    padding: 0 0 60px 0;
+    padding-top: 6rem;
   }
 `
 
@@ -29,41 +28,36 @@ export const ContentContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  /* padding: 0 15px; */
+  flex-direction: column;
+  padding: 0px 1.5rem;
+  color: #000;
 `
 
-export const TextContainer = styled.div`
-  /* max-width: 540px; */
-  padding: 60px 24px;
-`
+export const TextContainer = styled.section``
 
-export const TopLine = styled.p`
-  margin-bottom: 48px;
+export const TopLine = styled.h3`
+  padding-bottom: 3rem;
   font-size: 1.1rem;
   font-weight: bold;
   text-transform: uppercase;
   color: #373e57;
 `
 
-export const Heading = styled.h1`
-  margin-bottom: 24px;
+export const Heading = styled.h2`
+  padding-bottom: 3rem;
   font-size: 2.8rem;
-  line-height: 1.2;
   font-weight: bold;
-  color: #000;
-  /* border: red solid 1px; */
+  line-height: 1.2;
 
   @media screen and (max-width: 480px) {
-    font-size: 32px;
+    font-size: 2rem;
   }
 `
 
-export const Subtitle = styled.p`
-  margin-bottom: 35px;
+export const DescriptionContent = styled.p`
+  padding-bottom: 3rem;
   font-size: 1.1rem;
-  line-height: 1.5;
-  color: #000;
-  /* border: red solid 1px; */
+  line-height: 1.7rem;
 
   @media screen and (max-width: 480px) {
     font-size: 1.1rem;
@@ -71,62 +65,35 @@ export const Subtitle = styled.p`
 `
 
 export const Contact = styled.p`
-  margin-bottom: 15px;
   font-size: 1.1rem;
-  line-height: 1.5;
-  color: #000;
+  line-height: 1.7rem;
   font-weight: bold;
-  /* border: red solid 1px; */
 
   @media screen and (max-width: 768px) {
     text-align: center;
     font-size: 1.1rem;
   }
-`
-
-export const Cursor = styled.span`
-  margin-bottom: 24px;
-  font-size: 1.1rem;
-  line-height: 32px;
-  color: #000;
-  font-weight: bold;
-  padding: 0 4px 0 0;
-  animation: blinker 1s linear infinite;
-
-  @keyframes blinker {
-    50% {
-      opacity: 0;
-    }
-  }
-
-  @media screen and (max-width: 768px) {
-    text-align: center;
-    font-size: 1.1rem;
-  }
-  /* border: red solid 1px; */
 `
 
 export const BtnContainer = styled.div`
   display: flex;
+  padding-top: 1.5rem;
 
   @media screen and (max-width: 768px) {
     justify-content: center;
   }
-  /* border: red solid 1px; */
 `
 
 export const ImgContainer = styled.div`
-  max-width: 555px;
-  height: 100%;
-  /* border: red solid 1px; */
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media screen and (max-width: 768px) {
+    padding-top: 4rem;
+  }
 `
 
 export const Img = styled.img`
   width: 100%;
-  margin: 0 0 10px 0;
-  padding-right: 0;
-  /* border: red solid 1px; */
 `

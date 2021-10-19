@@ -2,14 +2,28 @@ import React, { useState, useEffect } from "react"
 import styled from "styled-components"
 
 const StyledTypewriter = styled.span`
-  margin: 0 0 15px 4px;
+  margin: 0 0 0px 4px;
   font-size: 1.1rem;
-  line-height: 32px;
-  color: #000;
+  color: #f7a58f;
   font-weight: bold;
-  background: #f7a58f;
-  padding: 0 4px;
-  /* border: red solid 1px; */
+
+  @media screen and (max-width: 768px) {
+    text-align: center;
+    font-size: 1.1rem;
+  }
+`
+
+const Cursor = styled.span`
+  font-size: 1.1rem;
+  font-weight: bold;
+  animation: blinker 1s linear infinite;
+
+  @keyframes blinker {
+    50% {
+      opacity: 0;
+    }
+  }
+
   @media screen and (max-width: 768px) {
     text-align: center;
     font-size: 1.1rem;
@@ -38,7 +52,12 @@ const Typewriter = ({ words }) => {
     return () => clearInterval(interval)
   }, [typewriterText])
 
-  return <StyledTypewriter> {typewriterText} </StyledTypewriter>
+  return (
+    <>
+      <StyledTypewriter> {typewriterText}</StyledTypewriter>
+      <Cursor> _ </Cursor>
+    </>
+  )
 }
 
 export default Typewriter

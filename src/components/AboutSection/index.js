@@ -12,8 +12,7 @@ import {
   TextContainer,
   TopLine,
   Heading,
-  Subtitle,
-  Cursor,
+  DescriptionContent,
   Contact,
   BtnContainer,
   ImgContainer,
@@ -24,26 +23,30 @@ import Typewriter from "./Typewriter"
 const InfoSection = ({
   id,
   topLine,
-  headline,
-  description,
-  description2,
-  description3,
+  heading,
+  descriptionPartOne,
+  descriptionPartTwo,
+  descriptionPartThree,
   buttonLabel,
   img,
   alt,
-  fontBig,
-  big,
-  primary,
-  dark,
+  isActive,
 }) => {
-  const allMessages = ["Härliga", "Roliga", "Trevliga"]
+  const allMessages = [
+    "Snälla",
+    "Prestigelösa",
+    "Hjälpsamma",
+    "Engagerade",
+    "Kreativa",
+    "Pedagogiska",
+    "Orädda",
+    "Sociala",
+  ]
   const [showModal, setShowModal] = useState(false)
-  //   const [formSent, setFormSent] = useState(false)
 
   //Ändrar state från förgående, för att toggla modalen
   const openModal = () => {
     setShowModal(prev => !prev)
-    // setFormSent(false)
   }
 
   return (
@@ -53,62 +56,40 @@ const InfoSection = ({
           <GridContainer>
             <ContentContainer>
               <TextContainer>
-                <TopLine> {topLine} </TopLine> <Heading> {headline} </Heading>{" "}
-                <Subtitle>
-                  {" "}
-                  {description} {<br />}
+                <TopLine> {topLine} </TopLine>
+                <Heading> {heading} </Heading>
+                <DescriptionContent>
+                  {descriptionPartOne} {<br />}
                   {<br />}
-                  {description2} {<br />}
+                  {descriptionPartTwo} {<br />}
                   {<br />}
-                  {description3}
-                </Subtitle>{" "}
+                  {descriptionPartThree}
+                </DescriptionContent>
                 <Contact>
-                  Vi söker alltid efter{" "}
-                  <Typewriter words={allMessages}></Typewriter>{" "}
-                  <Cursor> _ </Cursor>{" "}
-                  <Contact> kollegor. Ska vi ta en fika ? </Contact>{" "}
-                </Contact>{" "}
+                  Vi söker alltid efter
+                  <Typewriter words={allMessages}></Typewriter>
+                </Contact>
+                <Contact>kollegor. Ska vi ta en fika ?</Contact>
                 <BtnContainer>
-                  {/* <Button
-                    to="home"
-                    smooth={true}
-                    duration={500}
-                    spy={true}
-                    exact="true"
-                    offset={-80}
-                    fontBig={fontBig}
-                    big={big}
-                    primary={primary}
-                    dark={dark}
-                    onClick={openModal}
-                  > */}
-                  <Button
-                    fontBig={fontBig}
-                    big={big}
-                    primary={primary}
-                    dark={dark}
-                    onClick={openModal}
-                  >
-                    {buttonLabel}{" "}
+                  <Button isActive={isActive} onClick={openModal}>
+                    {buttonLabel}
                   </Button>
                   <Modal
                     showModal={showModal}
                     setShowModal={setShowModal}
-                    // formSent={formSent}
-                    // setFormSent={setFormSent}
                     {...modalObj}
                   />
-                </BtnContainer>{" "}
-              </TextContainer>{" "}
-            </ContentContainer>{" "}
+                </BtnContainer>
+              </TextContainer>
+            </ContentContainer>
             <ContentContainer>
               <ImgContainer>
-                <Img src={img} alt={alt} />{" "}
-              </ImgContainer>{" "}
-            </ContentContainer>{" "}
-          </GridContainer>{" "}
-        </AboutContainer>{" "}
-      </AboutWrapper>{" "}
+                <Img src={img} alt={alt} />
+              </ImgContainer>
+            </ContentContainer>
+          </GridContainer>
+        </AboutContainer>
+      </AboutWrapper>
     </>
   )
 }

@@ -159,10 +159,7 @@ export const Modal = ({
                         //Btn inaktiverad om phoneNumberIsValid är false
                         disabled={!phoneNumberIsValid}
                         type="submit"
-                        fontBig={fontBig}
-                        big={big}
-                        primary={true}
-                        dark={true}
+                        isActive={true}
                       >
                         {buttonLabel}
                       </Button>
