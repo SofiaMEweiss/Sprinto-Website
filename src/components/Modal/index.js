@@ -40,7 +40,7 @@ export const Modal = ({
   const [formSent, setFormSent] = useState(false)
 
   //Validering av inputfältet
-  const allowedPhoneNumberCharacters = "+0123456789"
+  const allowedPhoneNumberCharacters = "+-0123456789"
   let phoneNumberIsValid = true
   let phoneNumberErrorMessage = ""
   if (phoneNumber === "") {

@@ -22,10 +22,10 @@ export const HeaderSection = () => {
           src={Video}
           type="video/mp4"
         />
-      </HeaderBgContainer>{" "}
+      </HeaderBgContainer>
       <HeaderContentContainer>
-        <Heading> Vi utvecklar teknik för människor </Heading>{" "}
-      </HeaderContentContainer>{" "}
+        <Heading> Vi utvecklar teknik för människor </Heading>
+      </HeaderContentContainer>
     </HeaderWrapper>
   )
 }
