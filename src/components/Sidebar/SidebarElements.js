@@ -18,8 +18,8 @@ export const SidebarWrapper = styled.aside`
 `
 export const IconContainer = styled.div`
   position: absolute;
-  top: 1.5em;
-  right: 1.5em;
+  top: 1.5rem;
+  right: 1.5rem;
   cursor: pointer;
 `
 

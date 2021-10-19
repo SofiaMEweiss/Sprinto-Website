@@ -7,18 +7,25 @@ import {
   HeaderBgContainer,
   HeaderVideoBg,
   HeaderContentContainer,
-  HeaderH1,
+  Heading,
 } from "./HeaderElements"
 
 export const HeaderSection = () => {
   return (
     <HeaderWrapper id="home">
       <HeaderBgContainer>
-        <HeaderVideoBg autoPlay playsinline muted loop src={Video} type="video/mp4" />
-      </HeaderBgContainer>
+        <HeaderVideoBg
+          autoPlay
+          playsinline
+          muted
+          loop
+          src={Video}
+          type="video/mp4"
+        />
+      </HeaderBgContainer>{" "}
       <HeaderContentContainer>
-        <HeaderH1>Vi utvecklar teknik för människor</HeaderH1>
-      </HeaderContentContainer>
+        <Heading> Vi utvecklar teknik för människor </Heading>{" "}
+      </HeaderContentContainer>{" "}
     </HeaderWrapper>
   )
 }

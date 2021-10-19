@@ -39,20 +39,22 @@ export const HeaderVideoBg = styled.video`
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
-  filter: grayscale(80%);
+  filter: grayscale(50%);
 `
 
 export const HeaderContentContainer = styled.div`
   display: flex;
   align-items: center;
+  justify-content: center;
   position: absolute;
-  z-index: 3;
+  z-index: 2;
 `
 
-export const HeaderH1 = styled.h1`
+export const Heading = styled.h1`
   color: #eeeae7;
   text-align: center;
   font-size: 4rem;
+  padding: 0 1.5rem;
 
   @media screen and (max-width: 1100px) {
     font-size: 3.2rem;

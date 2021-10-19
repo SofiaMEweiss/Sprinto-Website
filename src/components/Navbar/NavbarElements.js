@@ -26,10 +26,10 @@ export const NavbarContainer = styled.div`
   max-width: 1800px;
   width: 100%;
   z-index: 1;
-  padding: 0 3em;
+  padding: 0 3rem;
 
   @media screen and (max-width: 768px) {
-    padding: 0 1.5em;
+    padding: 0 1.5rem;
   }
 `
 
@@ -53,7 +53,7 @@ export const MobileIconContainer = styled.div`
     position: absolute;
     top: 0;
     right: 0;
-    padding-top: 0.3em;
+    padding-top: 0.3rem;
     transform: translate(-100%, 60%);
     cursor: pointer;
   }
@@ -73,7 +73,7 @@ export const NavMenu = styled.ul`
 
 export const NavItem = styled.li`
   height: 80%;
-  padding-left: 3em;
+  padding-left: 3rem;
 `
 
 export const NavLinks = styled(LinkScroll)`
