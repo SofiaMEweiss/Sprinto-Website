@@ -10,11 +10,11 @@ export const TeamContainer = styled.div`
   margin: auto;
 
   @media screen and (max-width: 768px) {
-    padding: 6rem 5rem 0 5rem;
+    padding: 6rem 5rem 4rem 5rem;
   }
 
   @media screen and (max-width: 600px) {
-    padding: 6rem 1.5rem 0 1.5rem;
+    padding: 6rem 1.5rem 4rem 1.5rem;
   }
 `
 
