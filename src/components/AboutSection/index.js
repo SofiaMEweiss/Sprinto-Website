@@ -3,7 +3,7 @@ import { useState } from "react"
 import { Button } from "../ButtonElement"
 import { Modal } from "../Modal"
 import { modalObj } from "../Modal/Data"
-
+import Typewriter from "./Typewriter"
 import {
   AboutWrapper,
   AboutContainer,
@@ -18,7 +18,6 @@ import {
   ImgContainer,
   Img,
 } from "./InfoElements"
-import Typewriter from "./Typewriter"
 
 const InfoSection = ({
   id,

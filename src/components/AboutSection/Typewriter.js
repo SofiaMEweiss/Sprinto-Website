@@ -1,50 +1,11 @@
 import React, { useState, useEffect } from "react"
-import styled from "styled-components"
-
-const Container = styled.div`
-  display: none;
-
-  @media screen and (max-width: 768px) {
-    display: block;
-  }
-`
-
-const SecondContainer = styled.div`
-  display: inline-block;
-
-  @media screen and (max-width: 768px) {
-    display: none;
-  }
-`
-
-const Mobile = styled.span`
-  @media screen and (max-width: 768px) {
-    text-align: center;
-    font-size: 1.1rem;
-    color: #f7a58f;
-    font-weight: bold;
-    /* display: inline-block; */
-  }
-`
-
-const StyledTypewriter = styled.span`
-  margin: 0 0 0px 4px;
-  font-size: 1.1rem;
-  color: #f7a58f;
-  font-weight: bold;
-`
-
-const Cursor = styled.span`
-  font-size: 1.1rem;
-  font-weight: bold;
-  animation: blinker 1s linear infinite;
-
-  @keyframes blinker {
-    50% {
-      opacity: 0;
-    }
-  }
-`
+import {
+  MobileContainer,
+  MobileTypewriter,
+  Cursor,
+  DesktopContainer,
+  DesktopTypewriter,
+} from "./TypewriterElements"
 
 const Typewriter = ({ words }) => {
   const typewriterspeed = 300
@@ -70,14 +31,14 @@ const Typewriter = ({ words }) => {
 
   return (
     <>
-      <Container>
-        <Mobile> {typewriterText}</Mobile>
-        <Cursor> _ </Cursor>
-      </Container>
-      <SecondContainer>
-        <StyledTypewriter> {typewriterText}</StyledTypewriter>
-        <Cursor> _ </Cursor>
-      </SecondContainer>
+      <MobileContainer>
+        <MobileTypewriter> {typewriterText}</MobileTypewriter>
+        <Cursor>_</Cursor>
+      </MobileContainer>
+      <DesktopContainer>
+        <DesktopTypewriter> {typewriterText}</DesktopTypewriter>
+        <Cursor>_</Cursor>
+      </DesktopContainer>
     </>
   )
 }
