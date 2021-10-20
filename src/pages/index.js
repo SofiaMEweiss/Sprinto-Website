@@ -34,7 +34,7 @@ const IndexPage = () => {
     //   <Layout>
     <div>
       <GlobalStyles />
-      <Seo title="Sprinto" />
+      <Seo title="Sprinto - Vi utvecklar teknik för människor" />
       {loading ? (
         <FadeLoader color={"#F7A58F"} loading={loading} />
       ) : (
