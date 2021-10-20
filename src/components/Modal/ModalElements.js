@@ -17,47 +17,54 @@ export const Background = styled.div`
 `
 
 export const ModalWrapper = styled.section`
+  position: relative;
   width: 720px;
   height: 550px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 8fr;
-  padding: 1.5em;
+  padding: 1.5rem;
   background: #373e57;
-  border-radius: 0.8em;
+  border-radius: 0.8rem;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
     rgba(0, 0, 0, 0.22) 0px 15px 12px;
-  color: #fff;
-
-  @media screen and (max-width: 660px) {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 0fr 8fr;
-  }
+  color: #eeeae7;
 `
-export const ModalTopContainer = styled.div`
-  display: flex;
-  justify-content: flex-end;
-  grid-column: 1/3;
-`
-
-export const CloseModalIcon = styled(FaTimes)`
+export const IconContainer = styled.div`
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
   cursor: pointer;
+`
+
+export const CloseIcon = styled(FaTimes)``
+
+export const GridContainer = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  height: 100%;
+
+  @media screen and (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
 `
 
 export const ModalLeftContainer = styled.div`
   display: flex;
   justify-content: center;
-  padding-right: 1em;
+  padding-right: 1rem;
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 
   @media screen and (max-width: 660px) {
-    padding-right: 0px;
+    padding-right: 0rem;
   } ;
 `
 
 export const ModalImg = styled.img`
   width: 100%;
 
-  @media screen and (max-width: 660px) {
+  @media screen and (max-width: 768px) {
     display: none;
   } ;
 `
@@ -65,26 +72,23 @@ export const ModalImg = styled.img`
 export const ModalRightContainer = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  padding-left: 1em;
+  justify-content: center;
+  align-items: center;
+  padding-left: 1rem;
 
-  @media screen and (max-width: 660px) {
-    padding-left: 0px;
+  @media screen and (max-width: 768px) {
+    padding-left: 0rem;
     text-align: center;
-    grid-row: 2/4;
   } ;
 `
-export const ModalTextContainer = styled.div``
 
 export const ModalHeading = styled.h2`
   display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
   font-size: 1.5rem;
   font-weight: bold;
-  line-height: 3rem;
-
-  @media screen and (max-width: 660px) {
-    justify-content: center;
-  }
+  /* line-height: 3rem; */
 
   @media screen and (max-width: 400px) {
     font-size: 1.3rem;
@@ -92,45 +96,47 @@ export const ModalHeading = styled.h2`
 
   @media screen and (max-width: 320px) {
     font-size: 1.1rem;
-    line-height: 2.5rem;
+    /* line-height: 2.5rem; */
   }
 
   @media screen and (max-width: 280px) {
     font-size: 1rem;
-    line-height: 2.3rem;
+    /* line-height: 2.3rem; */
   } ;
 `
 
 export const ModalSubtitle = styled.p`
   display: flex;
-  font-size: 1rem;
-  line-height: 1.3rem;
+  font-size: 1.1rem;
+  line-height: 1.8rem;
+  margin-bottom: 3rem;
+
+  @media screen and (max-width: 768px) {
+    margin: 0 3rem 3rem 0;
+  }
+
+  @media screen and (max-width: 500px) {
+    margin: 0 0rem 3rem 0;
+  }
 `
 export const ModalFormContainer = styled.form``
 export const ModalLabel = styled.label`
   display: flex;
   justify-content: center;
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid #eeeae7;
 `
 
 export const ModalInput = styled.input`
   width: 100%;
-  font-size: 1rem;
-  letter-spacing: 0.2rem;
-  padding: 0.5em 0 0.2em 1em;
-  border-radius: 1em;
-  outline: inherit;
+  padding: 0.5rem 0 0.2rem 0;
   border: none;
-  color: #94e7d3;
-  text-align: center;
+  outline: inherit;
   background-color: #373e57;
+  text-align: center;
+  font-size: 1.1rem;
+  letter-spacing: 0.2rem;
+  color: #94e7d3;
   transition: width 0.4s ease-in-out;
-  /* ${props =>
-    props.touched
-      ? props.valid
-        ? "border-color: green;"
-        : "border-color: red;"
-      : ""}  */
 
   ::placeholder {
     letter-spacing: 0rem;
@@ -139,14 +145,15 @@ export const ModalInput = styled.input`
 `
 
 export const ValidationMessage = styled.p`
-  padding: 0.5em 0 0 0;
+  margin: 0.5rem 0 0 0;
+  font-size: 0.8rem;
   text-align: center;
 `
 
 export const ModalBtnContainer = styled.div`
   display: flex;
   justify-content: center;
-  padding: 1.5em 0 3em 0;
+  margin: 1.5rem 0 0 0;
 `
 
 export const AfterSubmitContainer = styled.div`
@@ -156,16 +163,11 @@ export const AfterSubmitContainer = styled.div`
 `
 
 export const AfterSubmitHeading = styled.h2`
-  /* justify-content: center;
-  display: flex; */
   font-size: 1.3rem;
   font-weight: bold;
 `
 
 export const AfterSubmitText = styled.p`
-  /* justify-content: center;
-  display: flex; */
   font-size: 1.1rem;
   line-height: 1.8em;
-  /* font-weight: bold; */
 `

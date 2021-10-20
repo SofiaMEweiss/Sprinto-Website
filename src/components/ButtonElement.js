@@ -17,4 +17,10 @@ export const Button = styled.button`
     transition: all 0.2s ease-in-out;
     background: ${({ isActive }) => (isActive ? "#f3bcac" : "#dbdada")};
   }
+
+  &:disabled {
+    color: ##373e57;
+    background: #eeeae7;
+    cursor: auto;
+  }
 `

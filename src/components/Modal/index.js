@@ -1,14 +1,15 @@
 import React, { useState, useRef, useEffect, useCallback } from "react"
+import { IconContext } from "react-icons/lib"
 import { Button } from "../ButtonElement"
 import {
   Background,
   ModalWrapper,
-  ModalTopContainer,
-  CloseModalIcon,
+  CloseIcon,
+  IconContainer,
+  GridContainer,
   ModalLeftContainer,
   ModalImg,
   ModalRightContainer,
-  ModalTextContainer,
   ModalHeading,
   ModalSubtitle,
   ModalFormContainer,
@@ -24,12 +25,9 @@ import {
 export const Modal = ({
   showModal,
   setShowModal,
-  fontBig,
-  big,
   id,
-  headline,
+  heading,
   description,
-  buttonLabel,
   img,
   alt,
   sentMessageHeading,
@@ -110,67 +108,73 @@ export const Modal = ({
 
   return (
     <>
-      {showModal ? (
-        <Background ref={modalRef} onClick={closeModal} id={id}>
-          <ModalWrapper showModal={showModal}>
-            <ModalTopContainer>
-              <CloseModalIcon size={32} onClick={resetModal} />
-            </ModalTopContainer>
-            <ModalLeftContainer>
-              <ModalImg src={img} alt={alt} />
-            </ModalLeftContainer>
-            <ModalRightContainer>
-              {formSent ? (
-                <AfterSubmitContainer>
-                  <AfterSubmitHeading>{sentMessageHeading}</AfterSubmitHeading>
-                  <AfterSubmitText>{sentMessage}</AfterSubmitText>
-                </AfterSubmitContainer>
-              ) : (
-                <>
-                  <ModalTextContainer>
-                    <ModalHeading>{headline}</ModalHeading>
-                    <ModalSubtitle>{description}</ModalSubtitle>
-                  </ModalTextContainer>
-                  <ModalFormContainer
-                    onSubmit={event => postPhoneNumber(event)}
-                  >
-                    <ModalLabel>
-                      <ModalInput
-                        type="text"
-                        maxLength="13"
-                        minLength="8"
-                        onBlur={() => setInputFieldTouched(true)}
-                        onChange={event => {
-                          setPhoneNumber(event.target.value)
-                        }}
-                        value={phoneNumber}
-                        valid={phoneNumberIsValid}
-                        touched={inputFieldTouched}
-                        placeholder="Skriv ditt telefonnummer"
-                      />
-                    </ModalLabel>
-                    {inputFieldTouched ? (
-                      <ValidationMessage>
-                        {phoneNumberErrorMessage}
-                      </ValidationMessage>
-                    ) : null}
-                    <ModalBtnContainer>
-                      <Button
-                        //Btn inaktiverad om phoneNumberIsValid är false
-                        disabled={!phoneNumberIsValid}
-                        type="submit"
-                        isActive={true}
+      <IconContext.Provider value={{ color: "#eeeae7" }}>
+        {showModal ? (
+          <Background ref={modalRef} onClick={closeModal} id={id}>
+            <ModalWrapper showModal={showModal}>
+              <IconContainer onClick={resetModal}>
+                <CloseIcon size={32} />
+              </IconContainer>
+              <GridContainer>
+                <ModalLeftContainer>
+                  <ModalImg src={img} alt={alt} />
+                </ModalLeftContainer>
+                <ModalRightContainer>
+                  {formSent ? (
+                    <AfterSubmitContainer>
+                      <AfterSubmitHeading>
+                        {sentMessageHeading}
+                      </AfterSubmitHeading>
+                      <AfterSubmitText>{sentMessage}</AfterSubmitText>
+                    </AfterSubmitContainer>
+                  ) : (
+                    <>
+                      <ModalHeading>{heading}</ModalHeading>
+                      <ModalSubtitle>{description}</ModalSubtitle>
+                      <ModalFormContainer
+                        onSubmit={event => postPhoneNumber(event)}
                       >
-                        {buttonLabel}
-                      </Button>
-                    </ModalBtnContainer>
-                  </ModalFormContainer>
-                </>
-              )}
-            </ModalRightContainer>
-          </ModalWrapper>
-        </Background>
-      ) : null}
+                        <ModalLabel>
+                          <ModalInput
+                            type="text"
+                            maxLength="13"
+                            minLength="8"
+                            onBlur={() => setInputFieldTouched(true)}
+                            onChange={event => {
+                              setPhoneNumber(event.target.value)
+                            }}
+                            value={phoneNumber}
+                            valid={phoneNumberIsValid}
+                            touched={inputFieldTouched}
+                            placeholder="Telefonnummer"
+                          />
+                        </ModalLabel>
+                        {inputFieldTouched ? (
+                          <ValidationMessage>
+                            {phoneNumberErrorMessage}
+                          </ValidationMessage>
+                        ) : null}
+                        <ModalBtnContainer>
+                          <Button
+                            //Btn inaktiverad om phoneNumberIsValid är false
+                            disabled={!phoneNumberIsValid}
+                            type="submit"
+                            isActive={true}
+                          >
+                            {!phoneNumberIsValid
+                              ? "Skriv ditt nummer"
+                              : "Kontakta mig"}
+                          </Button>
+                        </ModalBtnContainer>
+                      </ModalFormContainer>
+                    </>
+                  )}
+                </ModalRightContainer>
+              </GridContainer>
+            </ModalWrapper>
+          </Background>
+        ) : null}
+      </IconContext.Provider>
     </>
   )
 }
