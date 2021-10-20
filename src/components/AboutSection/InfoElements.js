@@ -57,7 +57,7 @@ export const Heading = styled.h2`
 export const DescriptionContent = styled.p`
   padding-bottom: 3rem;
   font-size: 1.1rem;
-  line-height: 1.7rem;
+  line-height: 1.9rem;
 
   @media screen and (max-width: 480px) {
     font-size: 1.1rem;

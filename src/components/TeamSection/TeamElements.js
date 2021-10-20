@@ -1,30 +1,43 @@
 import styled from "styled-components"
 
 export const TeamWrapper = styled.section`
-  display: flex;
-  justify-content: center;
   background: #eeeae7;
 `
 
-export const TeamContainer = styled.div``
+export const TeamContainer = styled.div`
+  max-width: 1400px;
+  padding: 4rem 1.5rem;
+  margin: auto;
+
+  @media screen and (max-width: 768px) {
+    padding: 6rem 5rem 0 5rem;
+  }
+
+  @media screen and (max-width: 600px) {
+    padding: 6rem 1.5rem 0 1.5rem;
+  }
+`
+
+export const TopLine = styled.p`
+  margin-bottom: 3rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #373e57;
+`
 
 export const TeamCardContainer = styled.div`
-  max-width: 1400px;
-  margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  /* align-items: center; */
-  column-gap: 240px;
-  row-gap: 60px;
-  padding: 0 9px 60px 9px;
+  column-gap: 15rem;
+  row-gap: 4rem;
 
   @media screen and (max-width: 1400px) {
-    column-gap: 160px;
+    column-gap: 12%;
   }
 
   @media screen and (max-width: 768px) {
     grid-template-columns: 1fr;
-    padding: 0 20px 60px 20px;
   }
 `
 
@@ -32,67 +45,48 @@ export const TeamCard = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  border-radius: 10px;
-  /* height: 640px; */
   height: auto;
-  padding: 0px 0px 30px 0px;
-  margin: 15px;
 
   @media screen and (max-width: 768px) {
     align-items: center;
-    margin: 0px;
   }
 `
 
 export const TeamImg = styled.img`
-  height: 240px;
-  width: 240px;
-  margin-bottom: 20px;
+  height: 15rem;
+  width: 15rem;
+  margin-bottom: 1.5rem;
+
+  @media screen and (max-width: 320px) {
+    height: 14rem;
+    width: 14rem;
+  }
 `
 
-export const TeamH2 = styled.h2`
+export const Heading = styled.h2`
   font-size: 1.5rem;
-  margin-bottom: 10px;
-`
-export const TeamP = styled.p`
-  font-size: 1.1rem;
-  line-height: 1.8em;
-  margin-bottom: 8px;
+  margin-bottom: 0.5rem;
 
   @media screen and (max-width: 768px) {
-    margin: 0 50px;
-  }
-
-  @media screen and (max-width: 500px) {
-    margin: 0px;
+    text-align: center;
   }
 `
 
-export const TeamH3 = styled.h3`
+export const Title = styled.h3`
+  margin-bottom: 0.5rem;
   font-size: 1.1rem;
-  margin-bottom: 8px;
   font-weight: 500;
-`
-
-export const TopLine = styled.p`
-  margin-bottom: 48px;
-  font-size: 1.1rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  color: #373e57;
-  padding: 60px 24px 0 24px;
 `
 
 export const Delimiter = styled.hr`
   height: 4px;
   width: 10em;
-  border: none;
+  margin-bottom: 1.5rem;
   background-color: #373e57;
+  border: none;
+`
 
-  margin-bottom: 24px;
-  /* background-color: ${({ newColor }) =>
-    newColor ? "#373e57" : "#94e7d3"}; */
-  /* &:nth-child(odd) {
-    background-color: #94e7d3;
-  } */
+export const Description = styled.p`
+  font-size: 1.1rem;
+  line-height: 1.9rem;
 `
