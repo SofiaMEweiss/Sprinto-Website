@@ -1,7 +1,5 @@
 import React from "react"
-
 import Video from "../../videos/video.mp4"
-
 import {
   HeaderWrapper,
   HeaderBgContainer,

@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react"
-// import { FaBars } from "react-icons/fa"
 import { IconContext } from "react-icons/lib"
 import { animateScroll as scroll } from "react-scroll"
 import Logo from "../../images/nav-img-logo.svg"
@@ -37,12 +36,13 @@ const Navbar = ({ toggle }) => {
   }
   return (
     <>
+      {" "}
       {/* För att alla ikoner ska få en viss färg */}
       <IconContext.Provider value={{ color: "#000" }}>
         <NavWrapper isNavScrolled={isNavScrolled}>
           <NavbarContainer>
             <NavLogoLink to="/" onClick={scrollToTop}>
-              <LogoIcon src={Logo} />
+              <LogoIcon src={Logo} alt="Sprintos logga" />
             </NavLogoLink>
             <MobileIconContainer onClick={toggle}>
               <MobileMenuIcon size={28} />

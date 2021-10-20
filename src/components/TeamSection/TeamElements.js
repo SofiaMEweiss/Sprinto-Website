@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 export const TeamWrapper = styled.section`
-  background: #eeeae7;
+  background: var(--tertiary-color);
 `
 
 export const TeamContainer = styled.div`
@@ -20,10 +20,10 @@ export const TeamContainer = styled.div`
 
 export const TopLine = styled.p`
   margin-bottom: 3rem;
-  font-size: 1.1rem;
+  font-size: var(--paragraph-font-size);
   font-weight: bold;
   text-transform: uppercase;
-  color: #373e57;
+  color: var(--primary-color);
 `
 
 export const TeamCardContainer = styled.div`
@@ -64,7 +64,7 @@ export const TeamImg = styled.img`
 `
 
 export const Heading = styled.h2`
-  font-size: 1.5rem;
+  font-size: var(--subheading-font-size);
   margin-bottom: 0.5rem;
 
   @media screen and (max-width: 768px) {
@@ -74,7 +74,7 @@ export const Heading = styled.h2`
 
 export const Title = styled.h3`
   margin-bottom: 0.5rem;
-  font-size: 1.1rem;
+  font-size: var(--paragraph-font-size);
   font-weight: 500;
 `
 
@@ -82,11 +82,11 @@ export const Delimiter = styled.hr`
   height: 4px;
   width: 10em;
   margin-bottom: 1.5rem;
-  background-color: #373e57;
+  background-color: var(--primary-color);
   border: none;
 `
 
 export const Description = styled.p`
-  font-size: 1.1rem;
+  font-size: var(--paragraph-font-size);
   line-height: 1.9rem;
 `

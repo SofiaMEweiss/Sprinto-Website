@@ -12,7 +12,7 @@ export const NavWrapper = styled.nav`
   height: 80px;
   margin-top: -80px;
   background: ${({ isNavScrolled }) =>
-    isNavScrolled ? "#fff" : "transparent"};
+    isNavScrolled ? "var(--background-color)" : "transparent"};
   opacity: ${({ isNavScrolled }) => (isNavScrolled ? "0.90" : "1")};
 
   @media screen and (max-width: 960px) {
@@ -80,18 +80,18 @@ export const NavLinks = styled(LinkScroll)`
   display: flex;
   align-items: center;
   height: 100%;
-  color: #000;
+  color: var(--font-color);
   text-decoration: none;
-  font-size: 1.1rem;
+  font-size: var(--paragraph-font-size);
   font-weight: bold;
   text-transform: uppercase;
   cursor: pointer;
 
   &:hover {
-    color: #353434;
+    color: var(--primary-color);
     transition: 0.2s ease-in-out;
   }
   &.active {
-    border-bottom: 3px solid #f7a58f;
+    border-bottom: 3px solid var(--cta-color);
   }
 `

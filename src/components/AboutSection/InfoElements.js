@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 export const AboutWrapper = styled.section`
-  background: #fff;
+  background: var(--background-color);
 `
 
 export const AboutContainer = styled.div`
@@ -30,22 +30,22 @@ export const ContentContainer = styled.div`
   align-items: center;
   flex-direction: column;
   padding: 0px 1.5rem;
-  color: #000;
+  color: var(--font-color);
 `
 
 export const TextContainer = styled.section``
 
 export const TopLine = styled.h3`
-  padding-bottom: 3rem;
-  font-size: 1.1rem;
+  margin-bottom: 3rem;
+  font-size: var(--paragraph-font-size);
   font-weight: bold;
   text-transform: uppercase;
-  color: #373e57;
+  color: var(--primary-color);
 `
 
 export const Heading = styled.h2`
-  padding-bottom: 3rem;
-  font-size: 2.8rem;
+  margin-bottom: 3rem;
+  font-size: var(--heading-font-size);
   font-weight: bold;
   line-height: 1.2;
 
@@ -55,29 +55,24 @@ export const Heading = styled.h2`
 `
 
 export const DescriptionContent = styled.p`
-  padding-bottom: 3rem;
-  font-size: 1.1rem;
+  margin-bottom: 3rem;
+  font-size: var(--paragraph-font-size);
   line-height: 1.9rem;
-
-  @media screen and (max-width: 480px) {
-    font-size: 1.1rem;
-  }
 `
 
 export const Contact = styled.p`
-  font-size: 1.1rem;
+  font-size: var(--paragraph-font-size);
   line-height: 1.7rem;
   font-weight: bold;
 
   @media screen and (max-width: 768px) {
     text-align: center;
-    font-size: 1.1rem;
   }
 `
 
 export const BtnContainer = styled.div`
   display: flex;
-  padding-top: 1.5rem;
+  margin-top: 1.5rem;
 
   @media screen and (max-width: 768px) {
     justify-content: center;
@@ -90,7 +85,7 @@ export const ImgContainer = styled.div`
   justify-content: center;
 
   @media screen and (max-width: 768px) {
-    padding-top: 4rem;
+    margin-top: 4rem;
   }
 `
 

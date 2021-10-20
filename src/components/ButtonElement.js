@@ -1,26 +1,28 @@
 import styled from "styled-components"
 
 export const Button = styled.button`
-  padding: 0.8em 2.4em;
-  border-radius: 5em;
+  width: 14rem;
+  padding: 1.5rem 0em;
+  border-radius: 5rem;
   border: none;
   outline: none;
   white-space: nowrap;
-  background: ${({ isActive }) => (isActive ? "#F7A58F" : "#dbdada")};
-  color: ${({ isActive }) => (isActive ? "#373E57" : "#353434")};
-  font-size: 1.1rem;
+  background: ${({ isActive }) => (isActive ? "var(--cta-color)" : "#dbdada")};
+  color: ${({ isActive }) => (isActive ? "var(--primary-color)" : "#353434")};
+  font-size: var(--paragraph-font-size);
   font-weight: bold;
   text-transform: uppercase;
   cursor: pointer;
 
   &:hover {
     transition: all 0.2s ease-in-out;
-    background: ${({ isActive }) => (isActive ? "#f3bcac" : "#dbdada")};
+    background: ${({ isActive }) =>
+      isActive ? "var(--hover-color)" : "#dbdada"};
   }
 
   &:disabled {
-    color: ##373e57;
-    background: #eeeae7;
+    color: var(--primary-color);
+    background: var(--tertiary-color);
     cursor: auto;
   }
 `

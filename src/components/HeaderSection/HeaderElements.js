@@ -51,9 +51,9 @@ export const HeaderContentContainer = styled.div`
 `
 
 export const Heading = styled.h1`
-  color: #eeeae7;
+  color: var(--tertiary-color);
   text-align: center;
-  font-size: 4rem;
+  font-size: var(--header-heading-font-size);
   padding: 0 1.5rem;
 
   @media screen and (max-width: 1100px) {

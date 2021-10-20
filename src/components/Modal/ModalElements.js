@@ -21,11 +21,11 @@ export const ModalWrapper = styled.section`
   width: 720px;
   height: 550px;
   padding: 1.5rem;
-  background: #373e57;
+  background: var(--primary-color);
   border-radius: 0.8rem;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
     rgba(0, 0, 0, 0.22) 0px 15px 12px;
-  color: #eeeae7;
+  color: var(--tertiary-color);
 `
 export const IconContainer = styled.div`
   position: absolute;
@@ -86,28 +86,25 @@ export const ModalHeading = styled.h2`
   display: flex;
   justify-content: center;
   margin-bottom: 1rem;
-  font-size: 1.5rem;
+  font-size: var(--subheading-font-size);
   font-weight: bold;
-  /* line-height: 3rem; */
 
   @media screen and (max-width: 400px) {
     font-size: 1.3rem;
   }
 
   @media screen and (max-width: 320px) {
-    font-size: 1.1rem;
-    /* line-height: 2.5rem; */
+    font-size: var(--paragraph-font-size);
   }
 
   @media screen and (max-width: 280px) {
     font-size: 1rem;
-    /* line-height: 2.3rem; */
   } ;
 `
 
 export const ModalSubtitle = styled.p`
   display: flex;
-  font-size: 1.1rem;
+  font-size: var(--paragraph-font-size);
   line-height: 1.8rem;
   margin-bottom: 3rem;
 
@@ -131,22 +128,22 @@ export const ModalInput = styled.input`
   padding: 0.5rem 0 0.2rem 0;
   border: none;
   outline: inherit;
-  background-color: #373e57;
+  background-color: var(--primary-color);
   text-align: center;
-  font-size: 1.1rem;
+  font-size: var(--paragraph-font-size);
   letter-spacing: 0.2rem;
-  color: #94e7d3;
+  color: var(--secondary-color);
   transition: width 0.4s ease-in-out;
 
   ::placeholder {
     letter-spacing: 0rem;
-    color: #a09c9c;
+    color: var(--placeholder-color);
   }
 `
 
 export const ValidationMessage = styled.p`
   margin: 0.5rem 0 0 0;
-  font-size: 0.8rem;
+  font-size: var(--validation-font-size);
   text-align: center;
 `
 
@@ -163,11 +160,11 @@ export const AfterSubmitContainer = styled.div`
 `
 
 export const AfterSubmitHeading = styled.h2`
-  font-size: 1.3rem;
+  font-size: var(--subheading-font-size);
   font-weight: bold;
 `
 
 export const AfterSubmitText = styled.p`
-  font-size: 1.1rem;
+  font-size: var(--paragraph-font-size);
   line-height: 1.8em;
 `

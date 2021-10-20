@@ -11,10 +11,10 @@ export const SidebarWrapper = styled.aside`
   z-index: 999;
   width: 100%;
   height: 100%;
-  background: #373e57;
+  background: var(--primary-color);
   opacity: ${({ isOpen }) => (isOpen ? "100%" : "0")};
   transition: 0.3s ease-in-out;
-  color: #eeeae7;
+  color: var(--tertiary-color);
 `
 export const IconContainer = styled.div`
   position: absolute;
@@ -40,7 +40,7 @@ export const SidebarLink = styled(LinkScroll)`
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.5rem;
+  font-size: var(--subheading-font-size);
   font-weight: bold;
   text-decoration: none;
   list-style: none;
@@ -48,8 +48,8 @@ export const SidebarLink = styled(LinkScroll)`
   cursor: pointer;
 
   &:hover {
-    color: #fff;
-    border-bottom: 3px solid #f7a58f;
+    color: var(--background-color);
+    border-bottom: 3px solid var(--cta-color);
     transition: 0.2s ease-in-out;
   }
 `
